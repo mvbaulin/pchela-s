@@ -38,9 +38,9 @@
 							<a class="main-nav__link" href="#">Контакты</a>
 						</li>
 					</ul>
-					<a class="main-nav__phone" href="#">+7(495)228-09-45</a>
+					<a class="main-nav__phone" href="tel:74952280945">+7(495)228-09-45</a>
 					<button class="main-nav__burger">
-						<span class="vissualy-hidden">Открыть и закрыть меню</span>
+						<span class="visually-hidden">Открыть меню</span>
 					</button>
 				</nav>
 			</section>
@@ -64,6 +64,152 @@
 		<div class="main-slider__navigation">
 			<button class="main-slider__btn-prev">Назад</button>
 			<button class="main-slider__btn-next">Вперед</button>
+		</div>
+	</section>
+	<section class="section-services">
+		<div class="container">
+			<div class="section-services__wrapper">
+				<h2 class="section-title">Наши Услуги</h2>
+				<ul class="section-services__list">
+					<li class="service-card">
+						<a class="service-card__link-wrapper" href="#">
+							<h3 class="service-card__title">Переезды</h3>
+							<div class="service-card__image-wrapper">
+								<img src="#" alt="Переезды">
+								<!-- Временно. Сделать svg -->
+							</div>
+							<ul class="service-card__list">
+								<li class="service-card__list-item">Сборка и разобрка мебели</li>
+								<li class="service-card__list-item">Погрузка</li>
+								<li class="service-card__list-item">Транспортировка</li>
+							</ul>
+							<span class="service-card__arrow"></span>
+						</a>
+					</li>
+					<li class="service-card">
+						<a class="service-card__link-wrapper" href="#">
+							<h3 class="service-card__title">Транспортировка</h3>
+							<div class="service-card__image-wrapper">
+								<img src="#" alt="Транспортировка">
+								<!-- Временно. Сделать svg -->
+							</div>
+							<p class="service-card__description">
+								Транспортировка грузов по Москве и Московской области
+							</p>
+							<span class="service-card__arrow"></span>
+						</a>
+					</li>
+					<li class="service-card">
+						<a class="service-card__link-wrapper" href="#">
+							<h3 class="service-card__title">Погрузка</h3>
+							<div class="service-card__image-wrapper">
+								<img src="#" alt="Погрузка">
+								<!-- Временно. Сделать svg -->
+							</div>
+							<p class="service-card__description">
+								Погрузка и разгрузка любых грузов при переездах и на складе
+							</p>
+							<span class="service-card__arrow"></span>
+						</a>
+					</li>
+					<li class="service-card__service-card">
+						<a class="service-card__link-wrapper" href="#">
+							<h3 class="service-card__title">Складские услуги</h3>
+							<div class="service-card__image-wrapper">
+								<img src="#" alt="Складские услуги">
+								<!-- Временно. Сделать svg -->
+							</div>
+							<p class="service-card__description">
+								Мы предоставляем людей для работы на складах
+							</p>
+							<span class="service-card__arrow"></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="section-about-us">
+		<div class="container">
+			<div class="section-about-us__wrapper">
+				<h2 class="section-title">Почему мы?</h2>
+				<div class="section-about-us__content">
+					<p class="section-about-us__description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora consequatur unde omnis, debitis asperiores hic ullam reprehenderit totam commodi cumque, dolor at, repellendus possimus aperiam ipsa voluptate ut cupiditate obcaecati eos ab aliquam ipsam. Rerum eum error corporis tempore ipsam pariatur minus voluptate ad, dolor, aspernatur perspiciatis fugiat ea repellendus nostrum sequi quis. Nihil minima voluptatum sint numquam officiis quidem, doloribus libero molestiae maiores vero tempora enim expedita ea cum necessitatibus possimus fugiat mollitia repellendus quam, minus iure provident excepturi magnam magni quasi. Deleniti est eveniet suscipit molestias mollitia asperiores corporis, distinctio, quasi odio itaque saepe nulla consectetur voluptatem ipsam.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section-calculator">
+		<div class="container">
+			<div class="section-calculator__wrapper">
+				<form class="calculator" action="#">
+					<div class="calculator__wrapper">
+						<fieldset class="calculator__field calculator__field--cars">
+							<legend class="calculator__field-legend">Выбор машины</legend>
+							<div class="slider car-slider">
+								<div class="car-slider__page">
+									<div class="car-slider__image-wrapper">
+										<img class="car-slider__image" src="#" alt="Первая машина">
+										<!--  Менять url -->
+									</div>
+									<ul class="calculator__car-property-list">
+										<li class="calculator__car-property">Автомобиль:
+											<span class="calculator__car-value">Название автомобиля</span>
+										</li>
+										<li class="calculator__car-property">Вместимость:
+											<span class="calculator__car-value">5 тонн</span>
+										</li>
+										<li class="calculator__car-property">Габариты:
+											<span class="calculator__car-value">30х40х50</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset class="calculator__field calculator__field--main">
+							<legend class="calculator__field-legend">Время и расстояние</legend>
+							<ul class="calculator__list">
+								<li class="calculator__list-item">
+									<label class="calculator__label" for="calculator__time">Время:</label>
+									<input class="input calculator__input" id="calculator__time" type="number">
+								</li>
+								<li class="calculator__list-item">
+									<label class="calculator__label" for="calculator__distance">Выезд за МКАД км:</label>
+									<input class="input calculator__input" id="calculator__distance" type="number">
+								</li>
+							</ul>
+						</fieldset>
+						<fieldset class="calculator__field calculator__field--loaders">
+							<legend class="calculator__field-legend">Грузчики</legend>
+							<ul class="calculator__list">
+								<li class="calculator__list-item">
+									<label class="calculator__label" for="calculator__loaders">Количество:</label>
+									<input class="input calculator__input" id="calculator__loaders" type="number">
+								</li>
+								<li class="calculator__list-item">
+									<label class="calculator__label" for="calculator__loaders-time">Время:</label>
+									<input class="input calculator__input" id="calculator__loaders-time" type="number">
+								</li>
+							</ul>
+						</fieldset>
+						<fieldset class="calculator__field calculator__field--assemblers">
+							<legend class="calculator__field-legend">Сборщики мебели</legend>
+							<ul class="calculator__list">
+								<li class="calculator__list-item">
+									<label class="calculator__label" for="calculator__assemblers">Количество:</label>
+									<input class="input calculator__input" id="calculator__assemblers" type="number">
+								</li>
+								<li class="calculator__list-item">
+									<label class="calculator__label" for="calculator__assemblers-time">Время:</label>
+									<input class="input calculator__input" id="calculator__assemblers-time" type="number">
+								</li>
+							</ul>
+						</fieldset>
+					</div>
+				</form>
+			</div>
 		</div>
 	</section>
 </main>
