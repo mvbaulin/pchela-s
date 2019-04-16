@@ -13,8 +13,8 @@
 	<div class="container">
 		<div class="main-header__wrapper">
 			<section class="main-nav">
-				<a href="" class="logo">
-					<img src="" alt="Пчела-Сервис">
+				<a href="#" class="logo">
+					<img src="#" alt="Пчела-Сервис">
 					<!-- Временно. Сделать svg -->
 				</a>
 				<nav class="main-nav">
@@ -62,8 +62,8 @@
 			<img class="main-slider__image" src="#" alt="Складские услуги">
 		</div>
 		<div class="main-slider__navigation">
-			<button class="main-slider__btn-prev">Назад</button>
-			<button class="main-slider__btn-next">Вперед</button>
+			<button class="main-slider__btn-prev">Предыдущий слайд</button>
+			<button class="main-slider__btn-next">Следующий слайд</button>
 		</div>
 	</section>
 	<section class="section-services">
@@ -91,7 +91,7 @@
 							<h3 class="service-card__title">Транспортировка</h3>
 							<div class="service-card__image-wrapper">
 								<img src="#" alt="Транспортировка">
-								<!-- Временно. Сделать svg -->
+								<!-- Временно. Сделать svg бэкграундом-->
 							</div>
 							<p class="service-card__description">
 								Транспортировка грузов по Москве и Московской области
@@ -104,7 +104,7 @@
 							<h3 class="service-card__title">Погрузка</h3>
 							<div class="service-card__image-wrapper">
 								<img src="#" alt="Погрузка">
-								<!-- Временно. Сделать svg -->
+								<!-- Временно. Сделать svg бэкграундом-->
 							</div>
 							<p class="service-card__description">
 								Погрузка и разгрузка любых грузов при переездах и на складе
@@ -117,7 +117,7 @@
 							<h3 class="service-card__title">Складские услуги</h3>
 							<div class="service-card__image-wrapper">
 								<img src="#" alt="Складские услуги">
-								<!-- Временно. Сделать svg -->
+								<!-- Временно. Сделать svg бэкграундом-->
 							</div>
 							<p class="service-card__description">
 								Мы предоставляем людей для работы на складах
@@ -144,6 +144,7 @@
 	<section class="section-calculator">
 		<div class="container">
 			<div class="section-calculator__wrapper">
+				<h2 class="section-title">Калькулятор</h2>
 				<form class="calculator" action="#">
 					<div class="calculator__wrapper">
 						<fieldset class="calculator__field calculator__field--cars">
@@ -166,6 +167,10 @@
 										</li>
 									</ul>
 								</div>
+								<div class="car-slider__navigation">
+									<button class="car-slider__btn-prev">Предыдущий слайд</button>
+									<button class="car-slider__btn-next">Следующий слайд</button>
+								</div>
 							</div>
 						</fieldset>
 						<fieldset class="calculator__field calculator__field--main">
@@ -183,6 +188,9 @@
 						</fieldset>
 						<fieldset class="calculator__field calculator__field--loaders">
 							<legend class="calculator__field-legend">Грузчики</legend>
+							<label class="calculator__close" for="">Добавить грузчиков
+								<input class="checkbox" type="checkbox">
+							</label>
 							<ul class="calculator__list">
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__loaders">Количество:</label>
@@ -196,6 +204,9 @@
 						</fieldset>
 						<fieldset class="calculator__field calculator__field--assemblers">
 							<legend class="calculator__field-legend">Сборщики мебели</legend>
+							<label class="calculator__close" for="">Добавить сборщиков
+								<input class="checkbox" type="checkbox">
+							</label>
 							<ul class="calculator__list">
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__assemblers">Количество:</label>
@@ -212,6 +223,56 @@
 			</div>
 		</div>
 	</section>
+	<section class="section-echo">
+		<div class="container">
+			<div class="section-echo__wrapper">
+				<h2 class="section-title">Закажите звонок</h2>
+				<form class="echo-form" id="echo-form" action="#">
+					<div class="echo-form__wrapper">
+						<fieldset class="echo-form__field">
+							<legend class="echo-form__field-legend">Пользовательские данные</legend>
+							<ul class="echo-form__list">
+								<li class="echo-form__list-item">
+									<label class="echo-form__label" for="echo__name">Ваше имя:</label>
+									<input class="input echo-form__input" id="echo__name" type="text" required>
+								</li>
+								<li class="echo-form__list-item">
+									<label class="echo-form__label" for="echo__phone">Телефон:</label>
+									<input class="input echo-form__input" id="echo__phone" type="text" required>
+								</li>
+							</ul>
+						</fieldset>
+						<fieldset class="echo-form__field">
+							<legend class="echo-form__field-legend">Сообщение</legend>
+							<textarea class="echo-form__message" name="echo-form__message" rows="8" cols="80"></textarea>
+						</fieldset>
+						<fieldset class="echo-form__field">
+							<legend class="echo-form__field-legend">Подтверждение</legend>
+							<input class="button echo-form__button" form="echo-form" type="submit" value="Позвоните мне">
+						</fieldset>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
 </main>
+<footer class="main-footer">
+	<div class="main-footer__wrapper">
+		<a href="tel:74952280945" class="main-footer__phone">+7(495)228-09-45</a>
+		<p class="main-footer__description">
+			Мы имеем большой опыт и огромную базу довольных клиентов
+		</p>
+		<div class="main-footer__address">
+			<h3 class="main-footer__title">Как нас найти:</h3>
+			<p class="main-footer__office-address">
+				Наш офис находится по адресу:<br />
+				г. Москва, ул. Привольная 70к1
+			</p>
+			<iframe class="main-footer__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0f434f90a0b62de57b8531081051657f92bb857f45f5b6747b2b782d398128a5&amp;source=constructor" width="320" height="400" frameborder="0"></iframe>
+		</div>
+		<a class="main-footer__email" href="mailto:pereezd@ochela-s.ru">pereezd@pchela-s.ru</a>
+		<span class="main-footer__copyright">&copy 2001 - 2019</span>
+	</div>
+</footer>
 </body>
 </html>
