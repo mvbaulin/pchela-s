@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Пчела-Сервис</title>
 	<link rel="stylesheet" href="style/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Russo+One&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="style/style.css">
 </head>
 <body>
@@ -22,7 +23,7 @@
 							<span class="visually-hidden">Закрыть меню</span>
 						</button>
 					</div>
-					<nav class="site-menu__navigation site-menu__navigation--closed site-menu__navigation--nojs">
+					<nav class="site-menu__navigation  site-menu__navigation--nojs">
 						<ul class="site-menu__list">
 							<li class="site-menu__list-item">
 								<a class="site-menu__link" href="#">О компании</a>
@@ -68,18 +69,15 @@
 			<button class="main-slider__btn-next">Следующий слайд</button>
 		</div>
 	</section>
-	<section class="section-services">
+	<section class="site-section section-services">
 		<div class="container">
 			<div class="section-services__wrapper">
-				<h2 class="section-title">Наши Услуги</h2>
+				<h2 class="section-title section-services__section-title">Наши Услуги</h2>
 				<ul class="section-services__list">
-					<li class="service-card">
-						<a class="service-card__link-wrapper" href="#">
+					<li class="section-services__list-item">
+						<a class="service-card" href="#">
 							<h3 class="service-card__title">Переезды</h3>
-							<div class="service-card__image-wrapper">
-								<img src="#" alt="Переезды">
-								<!-- Временно. Сделать svg -->
-							</div>
+							<div class="service-card__icon service-card__icon--move"></div>
 							<ul class="service-card__list">
 								<li class="service-card__list-item">Сборка и разобрка мебели</li>
 								<li class="service-card__list-item">Погрузка</li>
@@ -88,39 +86,30 @@
 							<span class="service-card__arrow"></span>
 						</a>
 					</li>
-					<li class="service-card">
-						<a class="service-card__link-wrapper" href="#">
+					<li class="section-services__list-item">
+						<a class="service-card" href="#">
 							<h3 class="service-card__title">Транспортировка</h3>
-							<div class="service-card__image-wrapper">
-								<img src="#" alt="Транспортировка">
-								<!-- Временно. Сделать svg бэкграундом-->
-							</div>
+							<div class="service-card__icon service-card__icon--transportation"></div>
 							<p class="service-card__description">
 								Транспортировка грузов по Москве и Московской области
 							</p>
 							<span class="service-card__arrow"></span>
 						</a>
 					</li>
-					<li class="service-card">
-						<a class="service-card__link-wrapper" href="#">
+					<li class="section-services__list-item">
+						<a class="service-card" href="#">
 							<h3 class="service-card__title">Погрузка</h3>
-							<div class="service-card__image-wrapper">
-								<img src="#" alt="Погрузка">
-								<!-- Временно. Сделать svg бэкграундом-->
-							</div>
+							<div class="service-card__icon service-card__icon--loading"></div>
 							<p class="service-card__description">
 								Погрузка и разгрузка любых грузов при переездах и на складе
 							</p>
 							<span class="service-card__arrow"></span>
 						</a>
 					</li>
-					<li class="service-card__service-card">
-						<a class="service-card__link-wrapper" href="#">
+					<li class="section-services__list-item">
+						<a class="service-card" href="#">
 							<h3 class="service-card__title">Складские услуги</h3>
-							<div class="service-card__image-wrapper">
-								<img src="#" alt="Складские услуги">
-								<!-- Временно. Сделать svg бэкграундом-->
-							</div>
+							<div class="service-card__icon service-card__icon--warehouse"></div>
 							<p class="service-card__description">
 								Мы предоставляем людей для работы на складах
 							</p>

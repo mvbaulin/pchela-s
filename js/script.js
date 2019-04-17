@@ -9,10 +9,6 @@ noScript();
 
 burger.addEventListener('click', openCloseMenu);
 function openCloseMenu(){
-	if (mainNav.classList.contains('site-menu__navigation--closed')){
-		mainNav.classList.remove('site-menu__navigation--closed');
-		mainNav.classList.add('site-menu__navigation--opened');
-	} else {
-		mainNav.classList.add('site-menu__navigation--closed')
-	}
+	mainNav.classList.toggle('site-menu__navigation--opened');
+	console.log('sfsaf');
 }
