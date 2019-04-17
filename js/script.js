@@ -3,6 +3,7 @@ var mainNav = document.querySelector('.site-menu__navigation');
 
 function noScript(){
 	mainNav.classList.remove('site-menu__navigation--nojs');
+	// сделать проверку
 }
 noScript();
 
