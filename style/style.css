@@ -1,0 +1,26 @@
+.container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+/* MAIN-HEADER */
+/* LOGO */
+.logo__image-wrapper {
+  width: 140px;
+}
+/* MAIN-NAV */
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-nav__link {
+  text-decoration: none;
+}
+.main-nav__phone {
+  text-decoration: none;
+}
