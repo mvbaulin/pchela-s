@@ -12,41 +12,39 @@
 <header class="main-header">
 	<div class="main-header__wrapper">
 		<section class="site-menu">
-			<div class="container">
+			<div class="container container--full">
 				<div class="site-menu__wrapper">
-					<section class="burger__menu">
+					<div class="site-menu__burger-menu">
 						<a class="logo" href="#">
-							<div class="logo__image-wrapper">
-								<img class="logo__image" src="img/logo.svg" alt="Пчела-Сервис">
-							</div>
+							<img class="logo__image" src="img/logo.svg" alt="Пчела-Сервис" width="140">
 						</a>
 						<button class="site-menu__burger">
 							<span class="visually-hidden">Закрыть меню</span>
 						</button>
-					</section>
+					</div>
+					<nav class="site-menu__navigation site-menu__navigation--closed site-menu__navigation--nojs">
+						<ul class="site-menu__list">
+							<li class="site-menu__list-item">
+								<a class="site-menu__link" href="#">О компании</a>
+							</li>
+							<li class="site-menu__list-item">
+								<a class="site-menu__link" href="#">Услуги</a>
+							</li>
+							<li class="site-menu__list-item">
+								<a class="site-menu__link" href="#">Новости</a>
+							</li>
+							<li class="site-menu__list-item">
+								<a class="site-menu__link" href="#">Партнерам</a>
+							</li>
+							<li class="site-menu__list-item">
+								<a class="site-menu__link" href="#">Вакансии</a>
+							</li>
+							<li class="site-menu__list-item">
+								<a class="site-menu__link" href="#">Контакты</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
-				<nav class="site-menu__navigation">
-					<ul class="site-menu__list">
-						<li class="site-menu__list-item">
-							<a class="site-menu__link" href="#">О компании</a>
-						</li>
-						<li class="site-menu__list-item">
-							<a class="site-menu__link" href="#">Услуги</a>
-						</li>
-						<li class="site-menu__list-item">
-							<a class="site-menu__link" href="#">Новости</a>
-						</li>
-						<li class="site-menu__list-item">
-							<a class="site-menu__link" href="#">Партнерам</a>
-						</li>
-						<li class="site-menu__list-item">
-							<a class="site-menu__link" href="#">Вакансии</a>
-						</li>
-						<li class="site-menu__list-item">
-							<a class="site-menu__link" href="#">Контакты</a>
-						</li>
-					</ul>
-				</nav>
 			</div>
 		</section>
 	</div>
@@ -278,5 +276,7 @@
 		<span class="main-footer__copyright">&copy; 2001 - 2019</span>
 	</div>
 </footer>
+<script src="js/picturefill.min.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>
