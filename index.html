@@ -169,45 +169,85 @@
 							<ul class="calculator__list">
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__time">Время:</label>
-									<input class="input calculator__input" id="calculator__time" type="number">
+									<select class="input calculator__input" id="calculator__time" type="number">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+									</select>
 								</li>
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__distance">Выезд за МКАД км:</label>
-									<input class="input calculator__input" id="calculator__distance" type="number">
+									<select class="input calculator__input" id="calculator__distance" type="number">
+										<option value="В пределах МКАД">В пределах МКАД</option>
+									</select>
 								</li>
 							</ul>
 						</fieldset>
 						<fieldset class="calculator__field calculator__field--loaders">
 							<legend class="calculator__field-legend">Грузчики</legend>
-							<label class="calculator__close">Грузчики
+							<label class="calculator__close">Грузчики:
 								<input class="calculator__checkbox visually-hidden" type="checkbox">
 								<span class="calculator__button-close"></span>
 							</label>
 							<ul class="calculator__list calculator__list--hidden">
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__loaders">Количество:</label>
-									<input class="input calculator__input" id="calculator__loaders" type="number">
+									<select class="input calculator__input" id="calculator__loaders" type="select">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="4">3</option>
+									</select>
 								</li>
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__loaders-time">Время:</label>
-									<input class="input calculator__input" id="calculator__loaders-time" type="number">
+									<select class="input calculator__input" id="calculator__loaders-time" type="number">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+									</select>
 								</li>
 							</ul>
 						</fieldset>
 						<fieldset class="calculator__field calculator__field--assemblers">
 							<legend class="calculator__field-legend">Сборщики мебели</legend>
-							<label class="calculator__close">Сборщики
+							<label class="calculator__close">Сборщики:
 								<input class="calculator__checkbox visually-hidden" type="checkbox">
 								<span class="calculator__button-close"></span>
 							</label>
 							<ul class="calculator__list calculator__list--hidden">
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__assemblers">Количество:</label>
-									<input class="input calculator__input" id="calculator__assemblers" type="number">
+									<select class="input calculator__input" id="calculator__assemblers" type="number">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select>
 								</li>
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__assemblers-time">Время:</label>
-									<input class="input calculator__input" id="calculator__assemblers-time" type="number">
+									<select class="input calculator__input" id="calculator__assemblers-time" type="number">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+									</select>
 								</li>
 							</ul>
 						</fieldset>
@@ -216,31 +256,32 @@
 			</div>
 		</div>
 	</section>
-	<section class="section-echo">
+	<section class="site-section section-echo">
 		<div class="container">
 			<div class="section-echo__wrapper">
-				<h2 class="section-title">Закажите звонок</h2>
+				<h2 class="section-title section-echo__section-title">Закажите звонок</h2>
 				<form class="echo-form" id="echo-form" action="#">
 					<div class="echo-form__wrapper">
 						<fieldset class="echo-form__field">
-							<legend class="echo-form__field-legend">Пользовательские данные</legend>
+							<legend class="echo-form__field-legend visually-hidden">Пользовательские данные</legend>
 							<ul class="echo-form__list">
 								<li class="echo-form__list-item">
 									<label class="echo-form__label" for="echo__name">Ваше имя:</label>
-									<input class="input echo-form__input" id="echo__name" type="text" required>
+									<input class="input input--white echo-form__input" id="echo__name" type="text" required placeholder="Имя">
 								</li>
 								<li class="echo-form__list-item">
 									<label class="echo-form__label" for="echo__phone">Телефон:</label>
-									<input class="input echo-form__input" id="echo__phone" type="text" required>
+									<input class="input input--white echo-form__input" id="echo__phone" type="tel" required placeholder="+7__________">
 								</li>
 							</ul>
 						</fieldset>
 						<fieldset class="echo-form__field">
-							<legend class="echo-form__field-legend">Сообщение</legend>
-							<textarea class="echo-form__message" name="echo-form__message" rows="8" cols="10"></textarea>
+							<legend class="echo-form__field-legend visually-hidden">Сообщение</legend>
+							<label class="echo-form__label" for="echo-form__message">Сообщение:</label>
+							<textarea class="echo-form__message" id="echo-form__message" name="echo-form__message" rows="8" placeholder="Комментарий"></textarea>
 						</fieldset>
 						<fieldset class="echo-form__field">
-							<legend class="echo-form__field-legend">Подтверждение</legend>
+							<legend class="echo-form__field-legend visually-hidden">Подтверждение</legend>
 							<input class="button echo-form__button" form="echo-form" type="submit" value="Позвоните мне">
 						</fieldset>
 					</div>

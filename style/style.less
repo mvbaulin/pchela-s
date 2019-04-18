@@ -1,7 +1,7 @@
 @color-black: #000000;
 @color-white: #FFFFFF;
 @color-yellow: #FCDA00;
-@color-grey: #565656;
+@color-grey: #333333;
 @color-red: #EE0000;
 
 
@@ -362,7 +362,7 @@ img {
 .input {
 	box-sizing: border-box;
 	width: 100%;
-	font-size: 25px;
+	font-size: 23px;
 	line-height: 35px;
 	font-weight: bold;
 	padding: 5px 25px;
@@ -371,7 +371,12 @@ img {
 	-webkit-appearance: none;
 	&:focus {
 		outline: none;
+		box-shadow: 0px 0px 10px 0px @color-yellow;
 	}
+}
+
+.input--white {
+	border: 2px solid @color-white;
 }
 
 /*  SECTION-CALCULATOR*/
@@ -517,9 +522,6 @@ img {
 	user-select: none;
 }
 
-.calculator__close {
-
-}
 
 .calculator__checkbox {
 
@@ -571,4 +573,111 @@ img {
 
 .calculator__checkbox:focus + .calculator__button-close{
 	//ДОБАВИТЬ ТЕНЬ
+}
+
+
+
+
+/*  SECTION-ECHO*/
+
+.section-echo {
+
+}
+
+.section-echo__wrapper {
+
+}
+
+.section-echo__section-title {
+	margin-bottom: 20px;
+}
+
+/*  BUTTON*/
+
+.button {
+	display: block;
+	padding: 0;
+	padding: 15px 30px;
+	border: none;
+	font-size: 18px;
+	line-height: 25px;
+	font-weight: bold;
+	color: @color-white;
+	text-transform: uppercase;
+	border-radius: 30px;
+	background-color: @color-yellow;
+	cursor: pointer;
+	&:focus {
+		outline: none;
+		box-shadow: 0px 0px 10px 0px @color-yellow;
+	}
+}
+
+
+/*  ECHO-FORM*/
+
+.echo-form {
+
+}
+
+.echo-form__wrapper {
+	padding: 30px;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 20px;
+}
+
+.echo-form__field {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.echo-form__field-legend {
+
+}
+
+.echo-form__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.echo-form__list-item {
+
+}
+
+.echo-form__label {
+	display: block;
+	margin-bottom: 20px;
+	color: @color-white;
+	font-weight: bold;
+	font-size: 25px;
+	line-height: 35px;
+}
+
+.echo-form__input {
+	margin-bottom: 20px;
+}
+
+.echo-form__message {
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	padding: 25px;
+	width: 100%;
+	border: none;
+	border-radius: 20px;
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: bold;
+	resize: none;
+	&:focus {
+		outline: none;
+		box-shadow: 0px 0px 10px 0px @color-yellow;
+	}
+}
+
+
+
+.echo-form__button {
+	margin: 0 auto;
 }
