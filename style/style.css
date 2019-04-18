@@ -263,7 +263,7 @@ img {
   box-sizing: border-box;
   width: 100%;
   font-size: 25px;
-  line-height: 40px;
+  line-height: 35px;
   font-weight: bold;
   padding: 5px 25px;
   border: 2px solid #fcda00;
@@ -301,8 +301,12 @@ img {
   padding: 0;
   list-style: none;
 }
+.calculator__list--hidden {
+  display: none;
+}
 .calculator__label {
   display: block;
+  margin-top: 20px;
   font-size: 25px;
   line-height: 25px;
   font-weight: bold;
@@ -311,25 +315,24 @@ img {
 .calculator__close {
   position: relative;
   display: block;
-  margin-bottom: 20px;
   font-size: 25px;
-  line-height: 25px;
+  line-height: 40px;
   font-weight: bold;
   user-select: none;
 }
-.calculator__close-icon {
+.calculator__button-close {
   position: absolute;
   display: block;
   width: 40px;
   height: 40px;
-  top: -7px;
-  right: 0;
+  top: 0;
+  right: -15px;
   border-radius: 50%;
   background-color: #fcda00;
   cursor: pointer;
 }
-.calculator__close-icon:before,
-.calculator__close-icon:after {
+.calculator__button-close:before,
+.calculator__button-close:after {
   position: absolute;
   content: "";
   background-color: #ffffff;
@@ -337,24 +340,24 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.calculator__close-icon:before {
+.calculator__button-close:before {
   width: 5px;
   height: 20px;
 }
-.calculator__close-icon:after {
+.calculator__button-close:after {
   width: 20px;
   height: 5px;
 }
-.calculator__checkbox:checked + .calculator__close-icon {
+.calculator__checkbox:checked + .calculator__button-close {
   background-color: red;
 }
-.calculator__checkbox:checked + .calculator__close-icon:before,
-.calculator__checkbox:checked + .calculator__close-icon:after {
+.calculator__checkbox:checked + .calculator__button-close:before,
+.calculator__checkbox:checked + .calculator__button-close:after {
   transform: translate(-50%, -50%) rotate(135deg);
 }
-.calculator__checkbox:checked + .calculator__close-icon:before {
+.calculator__checkbox:checked + .calculator__button-close:before {
   height: 27px;
 }
-.calculator__checkbox:checked + .calculator__close-icon:after {
+.calculator__checkbox:checked + .calculator__button-close:after {
   width: 27px;
 }

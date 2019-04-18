@@ -363,7 +363,7 @@ img {
 	box-sizing: border-box;
 	width: 100%;
 	font-size: 25px;
-	line-height: 40px;
+	line-height: 35px;
 	font-weight: bold;
 	padding: 5px 25px;
 	border: 2px solid @color-yellow;
@@ -479,8 +479,13 @@ img {
 
 .calculator__list {
 	margin: 0;
+
 	padding: 0;
 	list-style: none;
+}
+
+.calculator__list--hidden {
+	display: none;
 }
 
 .calculator__list-item {
@@ -489,6 +494,7 @@ img {
 
 .calculator__label {
 	display: block;
+	margin-top: 20px;
 	font-size: 25px;
 	line-height: 25px;
 	font-weight: bold;
@@ -505,9 +511,8 @@ img {
 .calculator__close {
 	position: relative;
 	display: block;
-	margin-bottom: 20px;
 	font-size: 25px;
-	line-height: 25px;
+	line-height: 40px;
 	font-weight: bold;
 	user-select: none;
 }
@@ -520,13 +525,13 @@ img {
 
 }
 
-.calculator__close-icon {
+.calculator__button-close {
 	position: absolute;
 	display: block;
 	width: 40px;
 	height: 40px;
-	top: -7px;
-	right: 0;
+	top: 0;
+	right: -15px;
 	border-radius: 50%;
 	background-color: @color-yellow;
 	cursor: pointer;
@@ -550,7 +555,7 @@ img {
 	}
 }
 
-.calculator__checkbox:checked + .calculator__close-icon {
+.calculator__checkbox:checked + .calculator__button-close {
 	background-color: red;
 	&:before,
 	&:after {
@@ -564,6 +569,6 @@ img {
 	}
 }
 
-.calculator__checkbox:focus + .calculator__close-icon{
+.calculator__checkbox:focus + .calculator__button-close{
 	//ДОБАВИТЬ ТЕНЬ
 }
