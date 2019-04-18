@@ -140,10 +140,10 @@
 					<div class="calculator__wrapper">
 						<fieldset class="calculator__field calculator__field--cars">
 							<legend class="calculator__field-legend">Выбор машины</legend>
-							<div class="slider car-slider">
-								<div class="car-slider__page">
-									<div class="car-slider__image-wrapper">
-										<img class="car-slider__image" src="#" alt="Первая машина">
+							<div class="calculator-slider">
+								<div class="calculator-slider__slider-page">
+									<div class="calculator-slider__image-wrapper">
+										<img class="calculator-slider__image" src="#" alt="Первая машина">
 										<!--  Менять url -->
 									</div>
 									<ul class="calculator__car-property-list">
@@ -158,9 +158,9 @@
 										</li>
 									</ul>
 								</div>
-								<div class="car-slider__navigation">
-									<button class="car-slider__btn-prev">Предыдущий слайд</button>
-									<button class="car-slider__btn-next">Следующий слайд</button>
+								<div class="calculator-slider__navigation">
+									<button class="calculator-slider__btn calculator-slider__btn--prev">Предыдущий слайд</button>
+									<button class="calculator-slider__btn calculator-slider__btn--next">Следующий слайд</button>
 								</div>
 							</div>
 						</fieldset>
@@ -179,8 +179,9 @@
 						</fieldset>
 						<fieldset class="calculator__field calculator__field--loaders">
 							<legend class="calculator__field-legend">Грузчики</legend>
-							<label class="calculator__close">Добавить грузчиков
-								<input class="checkbox" type="checkbox">
+							<label class="calculator__close">Грузчики
+								<input class="calculator__checkbox visually-hidden" type="checkbox">
+								<span class="calculator__close-icon"></span>
 							</label>
 							<ul class="calculator__list">
 								<li class="calculator__list-item">
@@ -195,8 +196,9 @@
 						</fieldset>
 						<fieldset class="calculator__field calculator__field--assemblers">
 							<legend class="calculator__field-legend">Сборщики мебели</legend>
-							<label class="calculator__close">Добавить сборщиков
-								<input class="checkbox" type="checkbox">
+							<label class="calculator__close">Сборщики
+								<input class="calculator__checkbox visually-hidden" type="checkbox">
+								<span class="calculator__close-icon"></span>
 							</label>
 							<ul class="calculator__list">
 								<li class="calculator__list-item">
