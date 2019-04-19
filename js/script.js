@@ -10,11 +10,13 @@ function noScript(){
 noScript();
 
 window.addEventListener('scroll', menuFixing);
+window.addEventListener('gesturechange', menuFixing);
+
 
 function menuFixing(){
-	var scrollHeight = document.documentElement.scrollTop;
+	var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop;
 	var needHeight = menuBar.clientHeight;
-	if (scrollHeight >= needHeight) {
+	if (scrollHeight > 0) {
 		menuBar.classList.add('site-menu--fixed');
 		mainSlider.style.marginTop = needHeight + 'px';
 	}
@@ -24,7 +26,6 @@ function menuFixing(){
 	}
 }
 
-menuFixing();
 
 
 burger.addEventListener('click', openCloseMenu);
@@ -40,20 +41,13 @@ var mainSliderPages = document.querySelectorAll('.main-slider__slider-page');
 var mainSliderWindow = document.querySelector('.main-slider__pages')
 var mainSliderPrevBtn = document.querySelector('.main-slider__btn-prev');
 var mainSliderNextBtn = document.querySelector('.main-slider__btn-next');
-
+var mainSliderPosition = 0;
 
 mainSliderNextBtn.addEventListener('click', nextSlide);
 mainSliderPrevBtn.addEventListener('click', prevSlide);
 
-function prevSlide(){
-	mainSliderWindow.style.transform.translateX += 25 + '%';
-	console.log(mainSliderWindow.style.transform);
-}
 
-function nextSlide(){
-	mainSliderWindow.style.transform += 'translateX(-25%)';
-	console.log(mainSliderWindow.style.transform);
-}
+
 
 
 
