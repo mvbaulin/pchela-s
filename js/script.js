@@ -14,6 +14,53 @@ function openCloseMenu(){
 	mainNav.classList.toggle('site-menu__navigation--opened');
 }
 
+
+/*  MAIN-SLIDER*/
+
+var mainSliderPages = document.querySelectorAll('.main-slider__slider-page');
+var mainSliderWindow = document.querySelector('.main-slider__pages')
+var mainSliderPrevBtn = document.querySelector('.main-slider__btn-prev');
+var mainSliderNextBtn = document.querySelector('.main-slider__btn-next');
+
+
+mainSliderNextBtn.addEventListener('click', nextSlide);
+mainSliderPrevBtn.addEventListener('click', prevSlide);
+
+function prevSlide(){
+	mainSliderWindow.style.transform.translateX += 25 + '%';
+	console.log(mainSliderWindow.style.transform);
+}
+
+function nextSlide(){
+	mainSliderWindow.style.transform += 'translateX(-25%)';
+	console.log(mainSliderWindow.style.transform);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var calculatorButton = document.querySelectorAll('.calculator__checkbox');
 var calculatorHiddenAreas = document.querySelectorAll('.calculator__list--hidden');
 
@@ -32,3 +79,29 @@ for (let i = 0; i < calculatorButton.length; i++) {
 		}
 	});
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  CAR-SLIDER*/
+
+var carSliderPage = document.querySelectorAll('.calculator-slider__slider-page');
+var prevCarBtn = document.querySelector('.calculator-slider__btn--prev');
+var nextCarBtn = document.querySelector('.calculator-slider__btn--next');
+
+function carScroll(){
+	console.log('sfaf');
+}
+
+prevCarBtn.addEventListener('click', carScroll);

@@ -52,17 +52,27 @@
 </header>
 <main>
 	<section class="slider main-slider">
-		<div class="main-slider__slider-page">
-			<img class="main-slider__image" src="#" alt="Переезды">
-		</div>
-		<div class="main-slider__slider-page">
-			<img class="main-slider__image" src="#" alt="Транспортировка">
-		</div>
-		<div class="main-slider__slider-page">
-			<img class="main-slider__image" src="#" alt="Погрузки">
-		</div>
-		<div class="main-slider__slider-page">
-			<img class="main-slider__image" src="#" alt="Складские услуги">
+		<div class="main-slider__pages">
+			<div class="main-slider__slider-page">
+				<div class="main-slider__image-wrapper">
+					<img class="main-slider__image" src="img/main-slider/slider-move.jpg" alt="Переезды">
+				</div>
+			</div>
+			<div class="main-slider__slider-page">
+				<div class="main-slider__image-wrapper">
+					<img class="main-slider__image" src="img/main-slider/slider-transportation.jpg" alt="Транспортировка">
+				</div>
+			</div>
+			<div class="main-slider__slider-page">
+				<div class="main-slider__image-wrapper">
+					<img class="main-slider__image" src="img/main-slider/slider-loading.jpg" alt="Погрузки">
+				</div>
+			</div>
+			<div class="main-slider__slider-page">
+				<div class="main-slider__image-wrapper">
+					<img class="main-slider__image" src="img/main-slider/slider-warehouse.jpg" alt="Складские услуги">
+				</div>
+			</div>
 		</div>
 		<div class="main-slider__navigation">
 			<button class="main-slider__btn-prev">Предыдущий слайд</button>
@@ -141,27 +151,38 @@
 						<fieldset class="calculator__field calculator__field--cars">
 							<legend class="calculator__field-legend">Выбор машины</legend>
 							<div class="calculator-slider">
+								<div class="calculator-slider__slider-page calculator-slider__slider-page--active">
+									<div class="calculator-slider__image-wrapper">
+										<img class="calculator-slider__image" src="img/calculator/car-slider-1.jpg" alt="Первая машина">
+									</div>
+								</div>
 								<div class="calculator-slider__slider-page">
 									<div class="calculator-slider__image-wrapper">
-										<img class="calculator-slider__image" src="#" alt="Первая машина">
-										<!--  Менять url -->
+										<img class="calculator-slider__image" src="img/calculator/car-slider-2.jpg" alt="Вторая машина">
 									</div>
-									<ul class="calculator__car-property-list">
-										<li class="calculator__car-property">Автомобиль:
-											<span class="calculator__car-value">Название автомобиля</span>
-										</li>
-										<li class="calculator__car-property">Вместимость:
-											<span class="calculator__car-value">5 тонн</span>
-										</li>
-										<li class="calculator__car-property">Габариты:
-											<span class="calculator__car-value">30х40х50</span>
-										</li>
-									</ul>
 								</div>
 								<div class="calculator-slider__navigation">
-									<button class="calculator-slider__btn calculator-slider__btn--prev">Предыдущий слайд</button>
-									<button class="calculator-slider__btn calculator-slider__btn--next">Следующий слайд</button>
+									<button class="calculator-slider__btn calculator-slider__btn--prev">
+										<span class="visually-hidden">Предыдущая машина</span>
+									</button>
+									<button class="calculator-slider__btn calculator-slider__btn--next">
+										<span class="visually-hidden">Следующая машина</span>
+									</button>
 								</div>
+								<table class="calculator__car-property-table">
+									<tr>
+										<td class="calculator__car-property">Автомобиль:</td>
+										<td class="calculator__car-value">Название</td>
+									</tr>
+									<tr>
+										<td class="calculator__car-property">Вместимость:</td>
+										<td class="calculator__car-value">2 тонны</td>
+									</tr>
+									<tr>
+										<td class="calculator__car-property">Габариты:</td>
+										<td class="calculator__car-value">20х20х20</td>
+									</tr>
+								</table>
 							</div>
 						</fieldset>
 						<fieldset class="calculator__field calculator__field--main">
@@ -170,15 +191,15 @@
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__time">Время:</label>
 									<select class="input calculator__input" id="calculator__time" type="number">
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										<option value="6">6</option>
-										<option value="7">7</option>
-										<option value="8">8</option>
-										<option value="9">9</option>
+										<option value="1">1 час</option>
+										<option value="2">2 часа</option>
+										<option value="3">3 часа</option>
+										<option value="4">4 часа</option>
+										<option value="5">5 часов</option>
+										<option value="6">6 часов</option>
+										<option value="7">7 часов</option>
+										<option value="8">8 часов</option>
+										<option value="9">9 часов</option>
 									</select>
 								</li>
 								<li class="calculator__list-item">
@@ -199,23 +220,23 @@
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__loaders">Количество:</label>
 									<select class="input calculator__input" id="calculator__loaders" type="select">
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="4">3</option>
+										<option value="1">1 человек</option>
+										<option value="2">2 человека</option>
+										<option value="4">3 человека</option>
 									</select>
 								</li>
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__loaders-time">Время:</label>
 									<select class="input calculator__input" id="calculator__loaders-time" type="number">
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										<option value="6">6</option>
-										<option value="7">7</option>
-										<option value="8">8</option>
-										<option value="9">9</option>
+										<option value="1">1 час</option>
+										<option value="2">2 часа</option>
+										<option value="3">3 часа</option>
+										<option value="4">4 часа</option>
+										<option value="5">5 часов</option>
+										<option value="6">6 часов</option>
+										<option value="7">7 часов</option>
+										<option value="8">8 часов</option>
+										<option value="9">9 часов</option>
 									</select>
 								</li>
 							</ul>
@@ -230,23 +251,23 @@
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__assemblers">Количество:</label>
 									<select class="input calculator__input" id="calculator__assemblers" type="number">
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
+										<option value="1">1 человек</option>
+										<option value="2">2 человека</option>
+										<option value="4">3 человека</option>
 									</select>
 								</li>
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__assemblers-time">Время:</label>
 									<select class="input calculator__input" id="calculator__assemblers-time" type="number">
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										<option value="6">6</option>
-										<option value="7">7</option>
-										<option value="8">8</option>
-										<option value="9">9</option>
+										<option value="1">1 час</option>
+										<option value="2">2 часа</option>
+										<option value="3">3 часа</option>
+										<option value="4">4 часа</option>
+										<option value="5">5 часов</option>
+										<option value="6">6 часов</option>
+										<option value="7">7 часов</option>
+										<option value="8">8 часов</option>
+										<option value="9">9 часов</option>
 									</select>
 								</li>
 							</ul>
