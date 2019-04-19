@@ -38,6 +38,12 @@ img {
   display: block;
 }
 /* SITE-MENU */
+.site-menu--fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
 .site-menu__wrapper {
   position: relative;
 }
