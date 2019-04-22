@@ -6,8 +6,11 @@ function noScript(){
 	if (mainNav.classList.contains('site-menu__navigation--nojs')) {
 		mainNav.classList.remove('site-menu__navigation--nojs');
 	}
+	if (mainSlider.classList.contains('main-slider--nojs')) {
+		mainSlider.classList.remove('main-slider--nojs');
+	}
 }
-noScript();
+
 
 window.addEventListener('scroll', menuFixing);
 window.addEventListener('gesturechange', menuFixing);
@@ -39,15 +42,34 @@ function openCloseMenu(){
 var mainSlider = document.querySelector('.main-slider');
 var mainSliderPages = document.querySelectorAll('.main-slider__slider-page');
 var mainSliderWindow = document.querySelector('.main-slider__pages')
-var mainSliderPrevBtn = document.querySelector('.main-slider__btn-prev');
-var mainSliderNextBtn = document.querySelector('.main-slider__btn-next');
+var mainSliderPrevBtn = document.querySelector('.main-slider__btn--prev');
+var mainSliderNextBtn = document.querySelector('.main-slider__btn--next');
+
 var mainSliderPosition = 0;
 
-mainSliderNextBtn.addEventListener('click', nextSlide);
+
 mainSliderPrevBtn.addEventListener('click', prevSlide);
+mainSliderNextBtn.addEventListener('click', nextSlide);
 
+function prevSlide(){
+	mainSliderPosition += 25;
+	mainSliderWindow.style.transform = "translateX(" + mainSliderPosition + "%)";
+	console.log('prev ' + mainSliderPosition);
+	if (mainSliderPosition > 0) {
+		mainSliderPosition = -75;
+		mainSliderWindow.style.transform = "translateX(" + mainSliderPosition + "%)";
+	}
+}
 
-
+function nextSlide(){
+	mainSliderPosition += -25;
+	mainSliderWindow.style.transform = "translateX(" + mainSliderPosition + "%)";
+	console.log('next ' + mainSliderPosition);
+	if (mainSliderPosition < -75) {
+		mainSliderPosition = 0;
+		mainSliderWindow.style.transform = "translateX(" + mainSliderPosition + "%)";
+	}
+}
 
 
 
@@ -107,14 +129,19 @@ for (let i = 0; i < calculatorButton.length; i++) {
 
 
 
-/*  CAR-SLIDER*/
+// /*  CAR-SLIDER*/
+//
+// var carSliderPage = document.querySelectorAll('.calculator-slider__slider-page');
+// var prevCarBtn = document.querySelector('.calculator-slider__btn--prev');
+// var nextCarBtn = document.querySelector('.calculator-slider__btn--next');
+//
+// function carScroll(){
+// 	console.log('sfaf');
+// }
+//
+// prevCarBtn.addEventListener('click', carScroll);
 
-var carSliderPage = document.querySelectorAll('.calculator-slider__slider-page');
-var prevCarBtn = document.querySelector('.calculator-slider__btn--prev');
-var nextCarBtn = document.querySelector('.calculator-slider__btn--next');
 
-function carScroll(){
-	console.log('sfaf');
-}
 
-prevCarBtn.addEventListener('click', carScroll);
+
+noScript();
