@@ -48,8 +48,22 @@ var mainSliderNextBtn = document.querySelector('.main-slider__btn--next');
 var mainSliderPosition = 0;
 
 
+var mainSliderDots = document.querySelectorAll('.main-slider__dot');
+
 mainSliderPrevBtn.addEventListener('click', prevSlide);
 mainSliderNextBtn.addEventListener('click', nextSlide);
+
+for (var i = 0; i < mainSliderDots.length; i++){
+	mainSliderDots[i].addEventListener('click', clickDot);
+}
+
+
+function clickDot(){
+	mainSliderDots[i].classList.add('main-slider__dot--active');
+}
+
+
+
 
 function prevSlide(){
 	mainSliderPosition += 25;
@@ -70,6 +84,8 @@ function nextSlide(){
 		mainSliderWindow.style.transform = "translateX(" + mainSliderPosition + "%)";
 	}
 }
+
+
 
 
 
