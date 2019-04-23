@@ -1,6 +1,7 @@
 var burger = document.querySelector('.site-menu__burger');
 var mainNav = document.querySelector('.site-menu__navigation');
 var menuBar = document.querySelector('.site-menu');
+var numberList = document.querySelector('.site-menu__number-list ');
 
 function noScript(){
 	if (mainNav.classList.contains('site-menu__navigation--nojs')) {
@@ -8,6 +9,9 @@ function noScript(){
 	}
 	if (mainSlider.classList.contains('main-slider--nojs')) {
 		mainSlider.classList.remove('main-slider--nojs');
+	}
+	if (numberList.classList.contains('site-menu__number-list--nojs')) {
+		numberList.classList.remove('site-menu__number-list--nojs')
 	}
 }
 

@@ -105,18 +105,45 @@ img {
 	position: relative;
 }
 
-.site-menu__phone {
-	&:after {
-		position: absolute;
-		content: "";
-		width: 50px;
-		height: 50px;
-		top: 50%;
-		left: 55%;
-		transform: translateY(-50%);
-		background-image: url(../img/icons/phone.svg);
-	}
+
+.site-menu__number-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
+
+.site-menu__sumber-list-item {
+
+}
+
+.site-menu__number-name {
+	display: none;
+}
+
+.site-menu__number {
+	display: none;
+}
+
+.site-menu__number-list--nojs .site-menu__number-name {
+	display: block;
+	margin: 0;
+	padding: 0;
+	color: @color-white;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.site-menu__number-list--nojs .site-menu__number {
+	display: block;
+	text-decoration: none;
+	color: @color-yellow;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+
+
 
 
 .site-menu__burger-menu {
@@ -554,6 +581,19 @@ img {
 @media (min-width: @width-tablet) {
 	.service-card {
 		width: 100%;
+	}
+
+	.service-card__arrow  {
+		width: 100px;
+		height: 100px;
+		right: -50px;
+		bottom: -50px;
+		&:after {
+			width: 30px;
+			height: 30px;
+			top: 15px;
+			left: 15px;
+		}
 	}
 }
 
