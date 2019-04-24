@@ -352,29 +352,34 @@ img {
   box-shadow: 0px 0px 30px -10px #fcda00;
 }
 .service-card__title {
+  position: relative;
   margin: 0;
+  margin-bottom: 10px;
   padding: 0;
-  margin-bottom: 20px;
+  padding-bottom: 110px;
   font-size: 24px;
 }
-.service-card__icon {
-  margin: 0 auto;
-  margin-bottom: 20px;
+.service-card__title:after {
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100px;
   height: 100px;
   background-repeat: no-repeat;
   background-size: 100%;
 }
-.service-card__icon--move {
+.service-card__title--move:after {
   background-image: url(../img/icons/icon-move.png);
 }
-.service-card__icon--transportation {
+.service-card__title--transportation:after {
   background-image: url(../img/icons/icon-transportation.png);
 }
-.service-card__icon--loading {
+.service-card__title--loading:after {
   background-image: url(../img/icons/icon-loading.png);
 }
-.service-card__icon--warehouse {
+.service-card__title--warehouse:after {
   background-image: url(../img/icons/icon-warehouse.png);
 }
 .service-card__list {
