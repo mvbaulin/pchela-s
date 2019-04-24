@@ -23,28 +23,22 @@ body {
 }
 
 .container {
-	width: 300px;
+	max-width: 300px;
 	margin: 0 auto;
 	padding: 0 10px;
 }
 
-.container--full {
-	width: 100%;
-	padding: 0;
-}
-
 @media (min-width: @width-tablet) {
 	.container {
-		width: 708px;
+		max-width: 768px;
 		padding: 0 30px;
 	}
 }
 
 .container--full {
-	width: 100%;
+	max-width: 100%;
 	padding: 0;
 }
-
 
 img {
 	width: 100%;
@@ -89,14 +83,14 @@ img {
 
 .site-menu {
 	opacity: 1;
-	transition: 2s;
+	// transition: 1s;
+	z-index: 99;
 }
 
 .site-menu--fixed {
 	position: fixed;
 	width: 100%;
 	top: 0;
-	z-index: 99;
 	opacity: 0.7;
 }
 
@@ -200,7 +194,7 @@ img {
 
 .site-menu__list-item {
 	text-align: center;
-	border-bottom: 1px solid @color-grey;
+	border-bottom: 3px solid @color-grey;
 	background-color: @color-black;
 	&:hover {
 		background-color: @color-grey;
@@ -251,6 +245,7 @@ img {
 .main-slider {
 	overflow: hidden;
 	position: relative;
+	z-index: 1;
 }
 
 .main-slider__pages {
@@ -450,7 +445,7 @@ img {
 		display: -ms-flex;
 		display: flex;
 		width: 48%;
-		height: 350px;
+		min-height: 350px;
 		&:first-child,
 		&:nth-child(2) {
 			margin-bottom: 30px;
@@ -464,6 +459,7 @@ img {
 .service-card {
 	position: relative;
 	display: block;
+	box-sizing: border-box;
 	text-decoration: none;
 	color: inherit;
 	text-align: center;
@@ -487,7 +483,6 @@ img {
 	padding: 0;
 	margin-bottom: 20px;
 	font-size: 24px;
-	//text-shadow: 0px 0px 0px @color-yellow;
 }
 
 .service-card__icon {
@@ -769,7 +764,6 @@ img {
 
 .calculator__list {
 	margin: 0;
-
 	padding: 0;
 	list-style: none;
 }
@@ -920,7 +914,7 @@ img {
 
 .button {
 	display: block;
-	padding: 0;
+	box-sizing: border-box;
 	padding: 15px 30px;
 	border: none;
 	font-size: 18px;
@@ -1025,9 +1019,9 @@ img {
 /* MAIN-FOOTER */
 
 .main-footer {
-	background-color: @color-black;
 	color: @color-white;
 	margin-top: 20px;
+	background-color: @color-black;
 }
 
 .main-footer__wrapper {

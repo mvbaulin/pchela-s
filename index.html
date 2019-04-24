@@ -205,6 +205,10 @@
 										<td class="calculator__car-property">Габариты:</td>
 										<td class="calculator__car-value">20х20х20</td>
 									</tr>
+									<tr>
+										<td class="calculator__car-property">Мест для пассажиров:</td>
+										<td class="calculator__car-value">5</td>
+									</tr>
 								</table>
 							</div>
 						</fieldset>
@@ -212,8 +216,8 @@
 							<legend class="calculator__field-legend">Время и расстояние</legend>
 							<ul class="calculator__list">
 								<li class="calculator__list-item">
-									<label class="calculator__label" for="calculator__time">Время:</label>
-									<select class="input calculator__input" id="calculator__time" type="number">
+									<label class="calculator__label" for="calculator__car-time">Время на машину:</label>
+									<select class="input calculator__input" id="calculator__car-time">
 										<option value="1">1 час</option>
 										<option value="2">2 часа</option>
 										<option value="3">3 часа</option>
@@ -227,9 +231,7 @@
 								</li>
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__distance">Выезд за МКАД км:</label>
-									<select class="input calculator__input" id="calculator__distance" type="number">
-										<option value="В пределах МКАД">В пределах МКАД</option>
-									</select>
+									<input class="input calculator__input" id="calculator__distance" type="number" min="0" placeholder="1км = 33 руб."></input>
 								</li>
 							</ul>
 						</fieldset>
@@ -242,7 +244,7 @@
 							<ul class="calculator__list calculator__list--hidden">
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__loaders">Количество:</label>
-									<select class="input calculator__input" id="calculator__loaders" type="select">
+									<select class="input calculator__input" id="calculator__loaders">
 										<option value="1">1 человек</option>
 										<option value="2">2 человека</option>
 										<option value="4">3 человека</option>
@@ -250,9 +252,7 @@
 								</li>
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__loaders-time">Время:</label>
-									<select class="input calculator__input" id="calculator__loaders-time" type="number">
-										<option value="1">1 час</option>
-										<option value="2">2 часа</option>
+									<select class="input calculator__input" id="calculator__loaders-time">
 										<option value="3">3 часа</option>
 										<option value="4">4 часа</option>
 										<option value="5">5 часов</option>
@@ -273,7 +273,7 @@
 							<ul class="calculator__list calculator__list--hidden">
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__assemblers">Количество:</label>
-									<select class="input calculator__input" id="calculator__assemblers" type="number">
+									<select class="input calculator__input" id="calculator__assemblers">
 										<option value="1">1 человек</option>
 										<option value="2">2 человека</option>
 										<option value="4">3 человека</option>
@@ -281,9 +281,7 @@
 								</li>
 								<li class="calculator__list-item">
 									<label class="calculator__label" for="calculator__assemblers-time">Время:</label>
-									<select class="input calculator__input" id="calculator__assemblers-time" type="number">
-										<option value="1">1 час</option>
-										<option value="2">2 часа</option>
+									<select class="input calculator__input" id="calculator__assemblers-time">
 										<option value="3">3 часа</option>
 										<option value="4">4 часа</option>
 										<option value="5">5 часов</option>
