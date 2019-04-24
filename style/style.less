@@ -436,7 +436,7 @@ img {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		align-items: center;
+		// align-items: center;
 	}
 
 	.section-services__list-item {
@@ -445,7 +445,6 @@ img {
 		display: -ms-flex;
 		display: flex;
 		width: 48%;
-		min-height: 350px;
 		&:first-child,
 		&:nth-child(2) {
 			margin-bottom: 30px;
@@ -584,6 +583,11 @@ img {
 @media (min-width: @width-tablet) {
 	.service-card {
 		width: 100%;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	.service-card__arrow  {

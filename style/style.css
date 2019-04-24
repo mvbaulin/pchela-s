@@ -314,7 +314,6 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
   }
   .section-services__list-item {
     margin-bottom: 0;
@@ -322,7 +321,6 @@ img {
     display: -ms-flex;
     display: flex;
     width: 48%;
-    min-height: 350px;
   }
   .section-services__list-item:first-child,
   .section-services__list-item:nth-child(2) {
@@ -443,6 +441,11 @@ img {
 @media (min-width: 768px) {
   .service-card {
     width: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .service-card__arrow {
     width: 100px;
