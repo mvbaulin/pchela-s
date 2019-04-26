@@ -1,7 +1,9 @@
 var burger = document.querySelector('.site-menu__burger');
 var mainNav = document.querySelector('.site-menu__navigation');
 var menuBar = document.querySelector('.site-menu');
-var numberList = document.querySelector('.site-menu__number-list ');
+var menuNumber = document.querySelector('.site-menu__numbers ');
+var numbersButton = document.querySelector('.site-menu__number-button');
+var numbersArea = document.querySelector('.site-menu__number-list ');
 
 function noScript(){
 	if (mainNav.classList.contains('site-menu__navigation--nojs')) {
@@ -10,10 +12,15 @@ function noScript(){
 	if (mainSlider.classList.contains('main-slider--nojs')) {
 		mainSlider.classList.remove('main-slider--nojs');
 	}
-	if (numberList.classList.contains('site-menu__number-list--nojs')) {
-		numberList.classList.remove('site-menu__number-list--nojs')
+	if (menuNumber.classList.contains('site-menu__numbers--nojs')) {
+		menuNumber.classList.remove('site-menu__numbers--nojs')
 	}
 }
+
+
+
+
+
 
 
 window.addEventListener('scroll', menuFixing);
@@ -34,11 +41,20 @@ function menuFixing(){
 }
 
 
+/* NAVIGATION */
+
+numbersButton.addEventListener('click', showHideNumbers);
+function showHideNumbers() {
+	numbersButton.classList.toggle('site-menu__number-button--active');
+	numbersArea.classList.toggle('site-menu__number-list--active');
+}
+
 
 burger.addEventListener('click', openCloseMenu);
 function openCloseMenu(){
 	mainNav.classList.toggle('site-menu__navigation--opened');
 }
+
 
 
 /*  MAIN-SLIDER*/
@@ -96,25 +112,7 @@ function nextSlide(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* CALCULATOR-BUTTONS*/
 
 var calculatorButton = document.querySelectorAll('.calculator__checkbox');
 var calculatorHiddenAreas = document.querySelectorAll('.calculator__list--hidden');
