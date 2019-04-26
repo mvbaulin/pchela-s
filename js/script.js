@@ -1,5 +1,6 @@
 var burger = document.querySelector('.site-menu__burger');
 var mainNav = document.querySelector('.site-menu__navigation');
+var mainNavItem = document.querySelector('.site-menu__list-item');
 var menuBar = document.querySelector('.site-menu');
 var menuNumber = document.querySelector('.site-menu__numbers ');
 var numbersButton = document.querySelector('.site-menu__number-button');
@@ -55,6 +56,10 @@ function openCloseMenu(){
 	mainNav.classList.toggle('site-menu__navigation--opened');
 }
 
+
+if (mainNavItem.classList.contains('site-menu__list-item--active')) {
+	mainNavItem.children[0].removeAttribute('href');
+}
 
 
 /*  MAIN-SLIDER*/
