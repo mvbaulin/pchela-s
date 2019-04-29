@@ -73,6 +73,7 @@ img {
 .site-menu {
   opacity: 1;
   z-index: 99;
+  background-color: #000000;
 }
 @media (max-width: 1200px) {
   .site-menu--fixed {
@@ -470,6 +471,7 @@ img {
 }
 .main-slider__btn:hover {
   background-color: rgba(0, 0, 0, 0.2);
+  background-image: url(../img/icons/slider-arrow--active.svg);
 }
 .main-slider__btn--prev {
   left: 0;
@@ -528,6 +530,11 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media (min-width: 1200px) {
+  body .main-slider {
+    margin-top: 0 !important;
+  }
+}
 /*  SITE-SECTION */
 .site-section {
   padding-top: 20px;
@@ -580,6 +587,18 @@ img {
   .section-services__list-item:first-child,
   .section-services__list-item:nth-child(2) {
     margin-bottom: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-services__list {
+    flex-wrap: nowrap;
+  }
+  .section-services__list-item {
+    width: 23.5%;
+  }
+  .section-services__list-item:first-child,
+  .section-services__list-item:nth-child(2) {
+    margin-bottom: 0;
   }
 }
 /*  SERVICE-CARD*/
@@ -715,6 +734,28 @@ img {
     left: 15px;
   }
 }
+@media (min-width: 1200px) {
+  .service-card {
+    padding: 20px 30px;
+    border-radius: 0;
+    box-shadow: 0px 0px 3px -1px #000000;
+  }
+  .service-card__price {
+    border-radius: 0;
+  }
+  .service-card__arrow {
+    width: 60px;
+    height: 60px;
+    right: -30px;
+    bottom: -30px;
+  }
+  .service-card__arrow:after {
+    width: 15px;
+    height: 15px;
+    top: 11px;
+    left: 11px;
+  }
+}
 /* SECTION-ABOUT-US */
 .section-about-us__section-title {
   margin-bottom: 20px;
@@ -730,6 +771,17 @@ img {
 }
 .section-about-us__description:first-child {
   margin-bottom: 10px;
+}
+@media (min-width: 1200px) {
+  .section-about-us__wrapper {
+    margin: 0 auto;
+    max-width: 75%;
+  }
+  .section-about-us__content {
+    padding: 40px;
+    border-radius: 0;
+    box-shadow: 0px 0px 3px -1px #000000;
+  }
 }
 /*  INPUT*/
 .input {
@@ -749,6 +801,11 @@ img {
   outline: none;
   box-shadow: 0px 0px 10px 0px #fcda00;
 }
+@media (min-width: 1200px) {
+  .input {
+    border-radius: 0;
+  }
+}
 .input option {
   font-weight: bold;
 }
@@ -765,6 +822,13 @@ img {
 }
 .section-calculator__title {
   margin-bottom: 20px;
+}
+@media (min-width: 1200px) {
+  .section-calculator__wrapper {
+    margin: 0 auto;
+    margin-bottom: 5px;
+    max-width: 75%;
+  }
 }
 /*  CALCULATOR*/
 .calculator__field {
@@ -830,8 +894,10 @@ img {
   padding: 0;
   list-style: none;
 }
-.calculator__list--hidden {
-  display: none;
+@media (max-width: 1200px) {
+  .calculator__list--hidden {
+    display: none;
+  }
 }
 .calculator__label {
   display: block;
@@ -923,9 +989,32 @@ img {
     align-self: flex-start;
   }
 }
+@media (min-width: 1200px) {
+  .calculator__field {
+    border-radius: 0;
+    box-shadow: 0px 0px 3px -1px #000000;
+  }
+  .calculator__close {
+    text-align: center;
+    font-size: 26px;
+    text-transform: uppercase;
+  }
+  .calculator__close span {
+    display: none;
+  }
+  .calculator__button-close {
+    display: none;
+  }
+}
 /*  SECTION-ECHO*/
 .section-echo__section-title {
   margin-bottom: 20px;
+}
+@media (min-width: 1200px) {
+  .section-echo__wrapper {
+    margin: 0 auto;
+    max-width: 75%;
+  }
 }
 /*  BUTTON*/
 .button {
@@ -945,6 +1034,11 @@ img {
 .button:focus {
   outline: none;
   box-shadow: 0px 0px 10px 0px #fcda00;
+}
+@media (min-width: 1200px) {
+  .button {
+    border-radius: 0;
+  }
 }
 /*  ECHO-FORM*/
 .echo-form__wrapper {
@@ -1003,19 +1097,30 @@ img {
     width: 48%;
   }
   .echo-form__button {
-    width: 80%;
+    max-width: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  .echo-form__wrapper {
+    border-radius: 0;
+  }
+  .echo-form__message {
+    border-radius: 0;
+  }
+  .echo-form__button {
+    max-width: 30%;
   }
 }
 /* MAIN-FOOTER */
 .main-footer {
   color: #ffffff;
   margin-top: 20px;
-  background-color: #000000;
 }
 .main-footer__wrapper {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
+  background-color: #000000;
 }
 .main-footer__phone {
   display: block;
@@ -1055,10 +1160,11 @@ img {
   width: 100%;
   height: 300px;
 }
-.main-footer__about {
+.main-footer__about-wrapper {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color: #000000;
 }
 .main-footer__email {
   display: block;

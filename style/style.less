@@ -115,6 +115,7 @@ img {
 	opacity: 1;
 	// transition: 1s;
 	z-index: 99;
+	background-color: @color-black;
 }
 
 @media (max-width: @width-desktop) {
@@ -592,6 +593,7 @@ img {
 	}
 	&:hover {
 		background-color: rgba(0, 0 ,0, 0.2);
+		background-image: url(../img/icons/slider-arrow--active.svg);
 	}
 }
 
@@ -664,7 +666,12 @@ img {
 	}
 }
 
-
+@media (min-width: @width-desktop) {
+	body .main-slider {
+		margin-top: 0 !important;
+		//фиксит фикс-маргин у слайдера
+	}
+}
 
 
 
@@ -741,6 +748,20 @@ img {
 		&:first-child,
 		&:nth-child(2) {
 			margin-bottom: 30px;
+		}
+	}
+}
+
+@media (min-width: @width-desktop) {
+	.section-services__list {
+		flex-wrap: nowrap;
+	}
+
+	.section-services__list-item {
+		width: 23.5%;
+		&:first-child,
+		&:nth-child(2) {
+			margin-bottom: 0;
 		}
 	}
 }
@@ -897,6 +918,32 @@ img {
 	}
 }
 
+@media (min-width: @width-desktop) {
+	.service-card {
+		padding: 20px 30px;
+		border-radius: 0;
+		box-shadow: 0px 0px 3px -1px @color-black;
+		// border: 1px solid @color-grey;
+	}
+
+	.service-card__price {
+		border-radius: 0;
+	}
+
+	.service-card__arrow  {
+		width: 60px;
+		height: 60px;
+		right: -30px;
+		bottom: -30px;
+		&:after {
+			width: 15px;
+			height: 15px;
+			top: 11px;
+			left: 11px;
+		}
+	}
+}
+
 
 /* SECTION-ABOUT-US */
 
@@ -926,6 +973,19 @@ img {
 	}
 }
 
+@media (min-width: @width-desktop) {
+	.section-about-us__wrapper {
+		margin: 0 auto;
+		max-width: 75%;
+	}
+
+	.section-about-us__content {
+		padding: 40px;
+		border-radius: 0;
+		box-shadow: 0px 0px 3px -1px @color-black;
+	}
+}
+
 
 /*  INPUT*/
 
@@ -944,6 +1004,12 @@ img {
 	&:focus {
 		outline: none;
 		box-shadow: 0px 0px 10px 0px @color-yellow;
+	}
+}
+
+@media (min-width: @width-desktop) {
+	.input {
+		border-radius: 0;
 	}
 }
 
@@ -969,6 +1035,14 @@ img {
 
 .section-calculator__title {
 	margin-bottom: 20px;
+}
+
+@media (min-width: @width-desktop) {
+	.section-calculator__wrapper {
+		margin: 0 auto;
+		margin-bottom: 5px;
+		max-width: 75%;
+	}
 }
 
 
@@ -1078,9 +1152,12 @@ img {
 	list-style: none;
 }
 
-.calculator__list--hidden {
-	display: none;
+@media (max-width: @width-desktop) {
+	.calculator__list--hidden {
+		display: none;
+	}
 }
+
 
 .calculator__list-item {
 
@@ -1203,6 +1280,28 @@ img {
 	}
 }
 
+@media (min-width: @width-desktop) {
+	.calculator__field {
+		border-radius: 0;
+		box-shadow: 0px 0px 3px -1px @color-black;
+	}
+
+	.calculator__close {
+		text-align: center;
+		font-size: 26px;
+		text-transform: uppercase;
+	}
+
+	.calculator__close span {
+		display: none;
+		//Убирает двоеточие
+	}
+
+	.calculator__button-close {
+		display: none;
+	}
+}
+
 
 
 
@@ -1218,6 +1317,13 @@ img {
 
 .section-echo__section-title {
 	margin-bottom: 20px;
+}
+
+@media (min-width: @width-desktop) {
+	.section-echo__wrapper {
+		margin: 0 auto;
+		max-width: 75%;
+	}
 }
 
 /*  BUTTON*/
@@ -1238,6 +1344,12 @@ img {
 	&:focus {
 		outline: none;
 		box-shadow: 0px 0px 10px 0px @color-yellow;
+	}
+}
+
+@media (min-width: @width-desktop) {
+	.button {
+		border-radius: 0;
 	}
 }
 
@@ -1321,7 +1433,21 @@ img {
 	}
 
 	.echo-form__button {
-		width: 80%;
+		max-width: 80%;
+	}
+}
+
+@media (min-width: @width-desktop) {
+	.echo-form__wrapper {
+		border-radius: 0;
+	}
+
+	.echo-form__message  {
+		border-radius: 0;
+	}
+
+	.echo-form__button {
+		max-width: 30%;
 	}
 }
 
@@ -1331,13 +1457,13 @@ img {
 .main-footer {
 	color: @color-white;
 	margin-top: 20px;
-	background-color: @color-black;
 }
 
 .main-footer__wrapper {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	text-align: center;
+	background-color: @color-black;
 }
 
 
@@ -1388,9 +1514,14 @@ img {
 }
 
 .main-footer__about {
+
+}
+
+.main-footer__about-wrapper {
 	text-align: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	background-color: @color-black;
 }
 
 .main-footer__email {
