@@ -119,8 +119,12 @@ function nextSlide(){
 
 /* CALCULATOR-BUTTONS*/
 
+var calculatorArea = document.querySelector('.calculator');
 var calculatorButton = document.querySelectorAll('.calculator__checkbox');
 var calculatorHiddenAreas = document.querySelectorAll('.calculator__list--hidden');
+var calculatorResultBox = document.querySelector('.calculator__result-wrapper');
+var calculatorResult = document.querySelector('.calculator__result');
+
 
 for (var i = 0; i < calculatorHiddenAreas.length; i++) {
 	calculatorHiddenAreas[i];
@@ -137,6 +141,27 @@ for (let i = 0; i < calculatorButton.length; i++) {
 		}
 	});
 }
+
+window.addEventListener('scroll', function(){
+	if (calculatorArea.getBoundingClientRect().top - menuBar.clientHeight  <= calculatorArea.offsetHeight && calculatorArea.getBoundingClientRect().bottom  >= 0) {
+		calculatorResultBox.classList.add('calculator__result-wrapper--showed');
+	} else {
+		calculatorResultBox.classList.remove('calculator__result-wrapper--showed');
+	}
+	// console.log(calculatorArea.getBoundingClientRect().top);
+})
+
+
+
+var loaders = document.querySelector('#calculator__loaders').value;
+
+calculatorResult.textContent = '';
+
+function calculatePrice(loadersCount, loadersTime, assemblersCount, assemblersTime, distance){
+	console.log(loader.option[1]);
+}
+
+
 
 
 
