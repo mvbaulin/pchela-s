@@ -230,39 +230,46 @@ for (let i = 0; i < calculatorSelects.length; i++) {
 		// console.log('loadersTimeCount: ' + loadersTimeCount);
 		// console.log('assemblersCount: ' + assemblersCount);
 		// console.log('assemblersTimeCount: ' + assemblersTimeCount);
-		showResult();
+		calculatePrice();
 	})
 }
 
 
-distanceInput.addEventListener('change', changeDistance);
-
-
+distanceInput.addEventListener('input', calculateDistance);
 
 let distanceCount = 0;
-
-function changeDistance(price){
-	distanceCount = distanceInput.value * price;
+function calculateDistance(){
+	distanceCount = distanceInput.value * distancePrice;
+	console.log(distanceCount);
 	return distanceCount;
-	// console.log('DistanceCount: ' + distanceCount);
+}
+
+
+let loadersPrice = 0;
+function calculateLoaders(){
+	loadersPrice = loadersCount * loadersTimeCount * loadersPricePerHour;
+	return loadersPrice;
+}
+
+
+let assemblersPrice = 0;
+function calculateAssemblers(){
+	assemblersPrice = assemblersCount * assemblersTimeCount * assemblersPricePerHour;
+	return assemblersPrice;
 }
 
 
 let result = 0;
+calculatorResult.textContent = 0;
 function calculatePrice(){
-	result = (loadersCount * loadersTimeCount * loadersPricePerHour) + (assemblersCount * assemblersTimeCount * assemblersPricePerHour) + changeDistance(distancePrice);
-	return result;
+	result = calculateAssemblers() + calculateLoaders() + calculateDistance();
+	calculatorResult.textContent = result;
 }
 
 
-function showResult(){
-	calculatorResult.textContent = '';
-	calculatorResult.textContent = calculatePrice();
-	let resultCount = calculatorResult.textContent
-	console.log('resultCount: ' + calculatePrice());
-}
 
-showResult();
+
+
 
 
 
