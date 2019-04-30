@@ -212,6 +212,7 @@ let calculatorSelects = document.querySelectorAll('.calculator select');
 
 
 let distancePrice = 33,
+	distanceStartedPrice = 5000,
 	loadersPricePerHour = 270,
 	assemblersPricePerHour = 450;
 
@@ -236,11 +237,11 @@ for (let i = 0; i < calculatorSelects.length; i++) {
 
 
 distanceInput.addEventListener('input', calculateDistance);
+distanceInput.addEventListener('change', calculatePrice);
 
-let distanceCount = 0;
+let distanceCount;
 function calculateDistance(){
-	distanceCount = distanceInput.value * distancePrice;
-	console.log(distanceCount);
+	distanceCount = (distanceInput.value * distancePrice) + distanceStartedPrice;
 	return distanceCount;
 }
 
@@ -259,8 +260,8 @@ function calculateAssemblers(){
 }
 
 
-let result = 0;
-calculatorResult.textContent = 0;
+let result = distanceStartedPrice;
+calculatorResult.textContent = distanceStartedPrice;
 function calculatePrice(){
 	result = calculateAssemblers() + calculateLoaders() + calculateDistance();
 	calculatorResult.textContent = result;
