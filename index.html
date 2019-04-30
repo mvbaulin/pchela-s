@@ -319,7 +319,7 @@
 										Время на машину:
 									</label>
 									<select class="input calculator__input" id="calculator__car-time">
-										<option value="1">1 час</option>
+										<option value="1" selected>1 час</option>
 										<option value="2">2 часа</option>
 										<option value="3">3 часа</option>
 										<option value="4">4 часа</option>
@@ -353,10 +353,10 @@
 										Количество:
 									</label>
 									<select class="input calculator__input" id="calculator__loaders">
-										<option value="0">Не нужны</option>
+										<option value="0" selected>Не нужны</option>
 										<option value="1">1 человек</option>
 										<option value="2">2 человека</option>
-										<option value="4">3 человека</option>
+										<option value="3">3 человека</option>
 									</select>
 								</li>
 								<li class="calculator__list-item">
@@ -364,7 +364,7 @@
 										Время:
 									</label>
 									<select class="input calculator__input" id="calculator__loaders-time">
-										<option value="3">3 часа</option>
+										<option value="3" selected>3 часа</option>
 										<option value="4">4 часа</option>
 										<option value="5">5 часов</option>
 										<option value="6">6 часов</option>
@@ -390,7 +390,7 @@
 										Количество:
 									</label>
 									<select class="input calculator__input" id="calculator__assemblers">
-										<option value="0">Не нужны</option>
+										<option value="0" selected>Не нужны</option>
 										<option value="1">1 человек</option>
 										<option value="2">2 человека</option>
 										<option value="4">3 человека</option>
@@ -401,7 +401,7 @@
 										Время:
 									</label>
 									<select class="input calculator__input" id="calculator__assemblers-time">
-										<option value="5">5 часов</option>
+										<option value="5" selected>5 часов</option>
 										<option value="6">6 часов</option>
 										<option value="7">7 часов</option>
 										<option value="8">8 часов</option>
@@ -436,7 +436,7 @@
 									<label class="echo-form__label" for="echo__name">
 										Ваше имя:
 									</label>
-									<input class="input input--white echo-form__input" id="echo__name" type="text" required placeholder="Имя и фамилия">
+									<input class="input input--white echo-form__input" id="echo__name" type="text" required placeholder="Имя и фамилия" minlength="3">
 								</li>
 								<li class="echo-form__list-item">
 									<label class="echo-form__label" for="echo__phone">

@@ -1151,12 +1151,12 @@ img {
 .main-footer {
   color: #ffffff;
   margin-top: 20px;
+  background-color: #000000;
 }
 .main-footer__wrapper {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
-  background-color: #000000;
 }
 .main-footer__phone {
   display: block;

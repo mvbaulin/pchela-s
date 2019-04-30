@@ -123,7 +123,7 @@ var calculatorArea = document.querySelector('.calculator');
 var calculatorButton = document.querySelectorAll('.calculator__checkbox');
 var calculatorHiddenAreas = document.querySelectorAll('.calculator__list--hidden');
 var calculatorResultBox = document.querySelector('.calculator__result-wrapper');
-var calculatorResult = document.querySelector('.calculator__result');
+
 
 
 for (var i = 0; i < calculatorHiddenAreas.length; i++) {
@@ -134,10 +134,10 @@ for (let i = 0; i < calculatorButton.length; i++) {
 	calculatorButton[i].addEventListener('change', function(){
 		if (calculatorButton[i].checked) {
 			calculatorHiddenAreas[i].classList.remove('calculator__list--hidden');
-			console.log('checked button' + i);
+			// console.log('checked button' + i);
 		} else {
 			calculatorHiddenAreas[i].classList.add('calculator__list--hidden');
-			console.log('unchecked button' + i);
+			// console.log('unchecked button' + i);
 		}
 	});
 }
@@ -153,13 +153,147 @@ window.addEventListener('scroll', function(){
 
 
 
-var loaders = document.querySelector('#calculator__loaders').value;
 
-calculatorResult.textContent = '';
+// var calculator = document.querySelector('.calculator');
 
-function calculatePrice(loadersCount, loadersTime, assemblersCount, assemblersTime, distance){
-	console.log(loader.option[1]);
+
+
+
+
+
+
+
+// loaders.addEventListener('change', function(){
+// 	for (var i = 0; i < loadersCount.length; i++) {
+// 		if (loadersCount[i].selected) {
+// 			console.log('Количество грузчиков: ' + loadersCount[i].value);
+// 			loaders = loadersCount[i].value;
+// 		}
+// 	}
+// });
+//
+// loadersTime.addEventListener('change', function(){
+// 	for (var i = 0; i < loadersTimeCount.length; i++) {
+// 		if (loadersTimeCount[i].selected) {
+// 			console.log('Время грузчиков: ' + loadersTimeCount[i].value);
+// 			loadersTime = loadersTimeCount[i].value;
+// 		}
+// 	}
+// });
+//
+// assemblers.addEventListener('change', function(){
+// 	for (var i = 0; i < assemblersCount.length; i++) {
+// 		if (assemblersCount[i].selected) {
+// 			console.log('Количество сборщиков: ' + assemblersCount[i].value);
+// 			assemblers = assemblersCount[i].value;
+// 		}
+// 	}
+// });
+//
+// assemblersTime.addEventListener('change', function(){
+// 	for (var i = 0; i < assemblersTimeCount.length; i++) {
+// 		if (assemblersTimeCount[i].selected) {
+// 			console.log('Время сборщиков: ' + assemblersTimeCount[i].value);
+// 			assemblersTime = assemblersTimeCount[i].value;
+// 		}
+// 	}
+// });
+
+var calculatorResult = document.querySelector('.calculator__result');
+var distanceInput = document.querySelector('#calculator__distance');
+
+var loaders = document.querySelector('#calculator__loaders');
+var loadersTime = document.querySelector('#calculator__loaders-time');
+var assemblers = document.querySelector('#calculator__assemblers');
+var assemblersTime = document.querySelector('#calculator__assemblers-time');
+
+
+let calculatorSelects = document.querySelectorAll('.calculator select');
+
+
+let distancePrice = 33,
+	loadersPricePerHour = 270,
+	assemblersPricePerHour = 450;
+
+let loadersCount = 0,
+	loadersTimeCount = 0,
+	assemblersCount = 0,
+	assemblersTimeCount = 0;
+
+for (let i = 0; i < calculatorSelects.length; i++) {
+	calculatorSelects[i].addEventListener('change', function(){
+		loadersCount = loaders.options[loaders.selectedIndex].value;
+		loadersTimeCount = loadersTime.options[loadersTime.selectedIndex].value;
+		assemblersCount = assemblers.options[assemblers.selectedIndex].value;
+		assemblersTimeCount = assemblersTime.options[assemblersTime.selectedIndex].value;
+		// console.log('loadersCount: ' + loadersCount);
+		// console.log('loadersTimeCount: ' + loadersTimeCount);
+		// console.log('assemblersCount: ' + assemblersCount);
+		// console.log('assemblersTimeCount: ' + assemblersTimeCount);
+		showResult();
+	})
 }
+
+
+distanceInput.addEventListener('change', changeDistance);
+
+
+
+let distanceCount = 0;
+
+function changeDistance(price){
+	distanceCount = distanceInput.value * price;
+	return distanceCount;
+	// console.log('DistanceCount: ' + distanceCount);
+}
+
+
+let result = 0;
+function calculatePrice(){
+	result = (loadersCount * loadersTimeCount * loadersPricePerHour) + (assemblersCount * assemblersTimeCount * assemblersPricePerHour) + changeDistance(distancePrice);
+	return result;
+}
+
+
+function showResult(){
+	calculatorResult.textContent = '';
+	calculatorResult.textContent = calculatePrice();
+	let resultCount = calculatorResult.textContent
+	console.log('resultCount: ' + calculatePrice());
+}
+
+showResult();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
