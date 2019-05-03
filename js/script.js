@@ -5,6 +5,7 @@ var menuBar = document.querySelector('.site-menu');
 var menuNumber = document.querySelector('.site-menu__numbers ');
 var numbersButton = document.querySelector('.site-menu__number-button');
 var numbersArea = document.querySelector('.site-menu__number-list ');
+var logo = document.querySelector('.logo');
 
 function noScript(){
 	if (mainNav.classList.contains('site-menu__navigation--nojs')) {
@@ -59,6 +60,7 @@ function openCloseMenu(){
 
 if (mainNavItem.classList.contains('site-menu__list-item--active')) {
 	mainNavItem.children[0].removeAttribute('href');
+	logo.removeAttribute('href');
 }
 
 
@@ -154,50 +156,11 @@ window.addEventListener('scroll', function(){
 
 
 
-// var calculator = document.querySelector('.calculator');
 
 
 
 
 
-
-
-
-// loaders.addEventListener('change', function(){
-// 	for (var i = 0; i < loadersCount.length; i++) {
-// 		if (loadersCount[i].selected) {
-// 			console.log('Количество грузчиков: ' + loadersCount[i].value);
-// 			loaders = loadersCount[i].value;
-// 		}
-// 	}
-// });
-//
-// loadersTime.addEventListener('change', function(){
-// 	for (var i = 0; i < loadersTimeCount.length; i++) {
-// 		if (loadersTimeCount[i].selected) {
-// 			console.log('Время грузчиков: ' + loadersTimeCount[i].value);
-// 			loadersTime = loadersTimeCount[i].value;
-// 		}
-// 	}
-// });
-//
-// assemblers.addEventListener('change', function(){
-// 	for (var i = 0; i < assemblersCount.length; i++) {
-// 		if (assemblersCount[i].selected) {
-// 			console.log('Количество сборщиков: ' + assemblersCount[i].value);
-// 			assemblers = assemblersCount[i].value;
-// 		}
-// 	}
-// });
-//
-// assemblersTime.addEventListener('change', function(){
-// 	for (var i = 0; i < assemblersTimeCount.length; i++) {
-// 		if (assemblersTimeCount[i].selected) {
-// 			console.log('Время сборщиков: ' + assemblersTimeCount[i].value);
-// 			assemblersTime = assemblersTimeCount[i].value;
-// 		}
-// 	}
-// });
 
 var calculatorResult = document.querySelector('.calculator__result');
 var distanceInput = document.querySelector('#calculator__distance');
