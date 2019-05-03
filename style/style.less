@@ -71,6 +71,13 @@ img {
   overflow: hidden;
 }
 
+@media (min-width: @width-desktop) {
+	main {
+		margin-top: 0 !important;
+		//фиксит фикс-маргин у слайдера
+	}
+}
+
 /* MAIN-HEADER */
 
 .main-header {
@@ -667,12 +674,7 @@ img {
 	}
 }
 
-@media (min-width: @width-desktop) {
-	body .main-slider {
-		margin-top: 0 !important;
-		//фиксит фикс-маргин у слайдера
-	}
-}
+
 
 
 
@@ -1667,3 +1669,7 @@ img {
 	background-image: url(../img/icons/inst.svg);
 	background-size: 150%;
 }
+
+
+
+/*  ABOUT-COMPANY PAGE*/
