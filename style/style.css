@@ -166,6 +166,7 @@ img {
   display: none;
 }
 .site-menu__numbers--nojs .site-menu__number-list {
+  display: block;
   position: static;
   padding: 0;
   width: auto;
