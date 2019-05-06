@@ -13,6 +13,15 @@
 	var main = document.querySelector('main')
 
 
+	function noScriptSiteMenu(){
+		if (window.variables.mainNav.classList.contains('site-menu__navigation--nojs')) {
+			window.variables.mainNav.classList.remove('site-menu__navigation--nojs');
+		}
+		if (window.variables.menuNumber.classList.contains('site-menu__numbers--nojs')) {
+			window.variables.menuNumber.classList.remove('site-menu__numbers--nojs')
+		}
+	}
+
 	numbersButton.addEventListener('click', showHideNumbers);
 	function showHideNumbers() {
 		numbersButton.classList.toggle('site-menu__number-button--active');
@@ -48,4 +57,6 @@
 			main.style.marginTop = 0;
 		}
 	}
+
+	noScriptSiteMenu();
 })()

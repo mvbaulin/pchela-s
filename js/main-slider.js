@@ -10,6 +10,12 @@
 	var mainSliderPosition = 0;
 
 
+	function noScriptMainSlider(){
+		if (window.variables.mainSlider.classList.contains('main-slider--nojs')) {
+			window.variables.mainSlider.classList.remove('main-slider--nojs');
+		}
+	}
+
 	var mainSliderDots = document.querySelectorAll('.main-slider__dot');
 
 	mainSliderPrevBtn.addEventListener('click', prevSlide);
@@ -44,4 +50,6 @@
 			mainSliderWindow.style.transform = "translateX(" + mainSliderPosition + "%)";
 		}
 	}
+
+	noScriptMainSlider();
 })()
