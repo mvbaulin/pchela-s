@@ -248,9 +248,6 @@ img {
 .site-menu__list-item:hover {
   background-color: #333333;
 }
-.site-menu__list-item--active {
-  display: none;
-}
 .site-menu__link {
   display: block;
   text-decoration: none;
@@ -388,7 +385,6 @@ img {
   }
   .site-menu__list-item--active {
     position: relative;
-    display: block;
   }
   .site-menu__list-item--active .site-menu__link {
     cursor: default;

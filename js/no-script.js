@@ -12,5 +12,5 @@
 			window.variables.mainSlider.classList.remove('main-slider--nojs');
 		}
 	}
-
+	noScript();
 })()

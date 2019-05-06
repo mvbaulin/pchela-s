@@ -1,20 +1,18 @@
 /* NAVIGATION OPEN-CLOSE*/
 
-
-
 (function(){
 	// var mainNav = document.querySelector('.site-menu__navigation') В ГЛОБАЛЕ
 	// var menuBar = document.querySelector('.site-menu')  В ГЛОБАЛЕ
+	// var menuNumber = document.querySelector('.site-menu__numbers') В ГЛОБАЛЕ
 	var mainNavItem = document.querySelector('.site-menu__list-item')
 	var burger = document.querySelector('.site-menu__burger')
 	var numbersButton = document.querySelector('.site-menu__number-button')
-	var menuNumber = document.querySelector('.site-menu__numbers ')
 	var numbersArea = document.querySelector('.site-menu__number-list ')
 
 	var logo = document.querySelector('.logo')
 	var main = document.querySelector('main')
 
-	
+
 	numbersButton.addEventListener('click', showHideNumbers);
 	function showHideNumbers() {
 		numbersButton.classList.toggle('site-menu__number-button--active');

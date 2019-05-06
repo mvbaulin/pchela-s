@@ -25,7 +25,7 @@
 	}
 
 	window.addEventListener('scroll', function(){
-		if (calculatorArea.getBoundingClientRect().top - menuBar.clientHeight  <= calculatorArea.offsetHeight && calculatorArea.getBoundingClientRect().bottom  >= 0) {
+		if (calculatorArea.getBoundingClientRect().top - window.variables.menuBar.clientHeight  <= calculatorArea.offsetHeight && calculatorArea.getBoundingClientRect().bottom  >= 0) {
 			calculatorResultBox.classList.add('calculator__result-wrapper--showed');
 		} else {
 			calculatorResultBox.classList.remove('calculator__result-wrapper--showed');
