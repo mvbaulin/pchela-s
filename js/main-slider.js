@@ -1,13 +1,13 @@
-/*  MAIN-SLIDER*/
+/* MAIN-SLIDER */
 
 (function(){
 	// var mainSlider = document.querySelector('.main-slider'); В ГЛОБАЛЕ
 	var mainSliderPages = document.querySelectorAll('.main-slider__slider-page');
-	var mainSliderWindow = document.querySelector('.main-slider__pages')
+	var mainSliderWrapper = document.querySelector('.main-slider__pages');
 	var mainSliderPrevBtn = document.querySelector('.main-slider__btn--prev');
 	var mainSliderNextBtn = document.querySelector('.main-slider__btn--next');
 
-	var mainSliderPosition = 0;
+
 
 
 	function noScriptMainSlider(){
@@ -16,40 +16,28 @@
 		}
 	}
 
-	var mainSliderDots = document.querySelectorAll('.main-slider__dot');
+	var mainSliderPosition = 0;
 
-	mainSliderPrevBtn.addEventListener('click', prevSlide);
-	mainSliderNextBtn.addEventListener('click', nextSlide);
-
-	for (var i = 0; i < mainSliderDots.length; i++){
-		mainSliderDots[i].addEventListener('click', clickDot);
-	}
-
-
-	function clickDot(){
-		mainSliderDots[i].classList.add('main-slider__dot--active');
-	}
-
-
-	function prevSlide(){
-		mainSliderPosition += 25;
-		mainSliderWindow.style.transform = "translateX(" + mainSliderPosition + "%)";
-		console.log('prev ' + mainSliderPosition);
+	function mainSliderScroll(needWidthToScroll){
+		mainSliderPosition += needWidthToScroll;
 		if (mainSliderPosition > 0) {
-			mainSliderPosition = -75;
-			mainSliderWindow.style.transform = "translateX(" + mainSliderPosition + "%)";
+			mainSliderPosition = -(mainSliderPages.length + 1) * 100;
 		}
+		else if (mainSliderPosition < -(mainSliderPages.length + 1) * 100) {
+			mainSliderPosition = 0;
+		}
+		mainSliderWrapper.style.transform = "translateX("+ mainSliderPosition + "vw)";
 	}
 
-	function nextSlide(){
-		mainSliderPosition += -25;
-		mainSliderWindow.style.transform = "translateX(" + mainSliderPosition + "%)";
-		console.log('next ' + mainSliderPosition);
-		if (mainSliderPosition < -75) {
-			mainSliderPosition = 0;
-			mainSliderWindow.style.transform = "translateX(" + mainSliderPosition + "%)";
-		}
-	}
+	mainSliderPrevBtn.addEventListener('click', function(){
+		mainSliderScroll(100);
+		console.log(mainSliderPosition);
+	});
+
+	mainSliderNextBtn.addEventListener('click', function(){
+		mainSliderScroll(-100);
+		console.log(mainSliderPosition);
+	});
 
 	noScriptMainSlider();
 })()

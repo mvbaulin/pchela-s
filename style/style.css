@@ -423,25 +423,27 @@ img {
 }
 /*  MAIN-SLIDER*/
 .main-slider {
-  overflow: hidden;
   position: relative;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  overflow: hidden;
   z-index: 1;
 }
 .main-slider__pages {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  width: 400%;
   justify-content: space-between;
   transform: translateX(0%);
   transition: 0.5s;
 }
 .main-slider__slider-page {
-  width: 100%;
+  width: 100vw;
   line-height: 0;
 }
 .main-slider__image-wrapper {
-  width: 100%;
+  width: 100vw;
 }
 .main-slider__image {
   width: 100%;
