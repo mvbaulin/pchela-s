@@ -1,7 +1,7 @@
 /*  MAIN-SLIDER*/
 
 (function(){
-	var mainSlider = document.querySelector('.main-slider');
+	// var mainSlider = document.querySelector('.main-slider'); В ГЛОБАЛЕ
 	var mainSliderPages = document.querySelectorAll('.main-slider__slider-page');
 	var mainSliderWindow = document.querySelector('.main-slider__pages')
 	var mainSliderPrevBtn = document.querySelector('.main-slider__btn--prev');

@@ -1,9 +1,0 @@
-var burger = document.querySelector('.site-menu__burger');
-var mainNav = document.querySelector('.site-menu__navigation');
-var mainNavItem = document.querySelector('.site-menu__list-item');
-var menuBar = document.querySelector('.site-menu');
-var menuNumber = document.querySelector('.site-menu__numbers ');
-var numbersButton = document.querySelector('.site-menu__number-button');
-var numbersArea = document.querySelector('.site-menu__number-list ');
-var logo = document.querySelector('.logo');
-var main = document.querySelector('main');

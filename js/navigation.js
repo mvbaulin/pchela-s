@@ -1,5 +1,16 @@
 /* NAVIGATION OPEN-CLOSE*/
 
+// var mainNav = document.querySelector('.site-menu__navigation') В ГЛОБАЛЕ
+// var menuBar = document.querySelector('.site-menu')  В ГЛОБАЛЕ
+var mainNavItem = document.querySelector('.site-menu__list-item')
+var burger = document.querySelector('.site-menu__burger')
+var numbersButton = document.querySelector('.site-menu__number-button')
+var menuNumber = document.querySelector('.site-menu__numbers ')
+var numbersArea = document.querySelector('.site-menu__number-list ')
+
+var logo = document.querySelector('.logo')
+var main = document.querySelector('main')
+
 (function(){
 	numbersButton.addEventListener('click', showHideNumbers);
 	function showHideNumbers() {
@@ -10,7 +21,7 @@
 
 	burger.addEventListener('click', openCloseMenu);
 	function openCloseMenu(){
-		mainNav.classList.toggle('site-menu__navigation--opened');
+		window.variables.mainNav.classList.toggle('site-menu__navigation--opened');
 	}
 
 
@@ -26,13 +37,13 @@
 
 	function menuFixing(){
 		var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop;
-		var needHeight = menuBar.clientHeight;
+		var needHeight = window.variables.menuBar.clientHeight;
 		if (scrollHeight > 0) {
-			menuBar.classList.add('site-menu--fixed');
+			window.variables.menuBar.classList.add('site-menu--fixed');
 			main.style.marginTop = needHeight + 'px';
 		}
 		else if (scrollHeight === 0) {
-			menuBar.classList.remove('site-menu--fixed');
+			window.variables.menuBar.classList.remove('site-menu--fixed');
 			main.style.marginTop = 0;
 		}
 	}
