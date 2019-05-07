@@ -568,7 +568,7 @@ img {
     display: -ms-flex;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
   }
   .section-services__list-item {
@@ -576,23 +576,7 @@ img {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
-    width: 48%;
-  }
-  .section-services__list-item:first-child,
-  .section-services__list-item:nth-child(2) {
-    margin-bottom: 30px;
-  }
-}
-@media (min-width: 1200px) {
-  .section-services__list {
-    flex-wrap: nowrap;
-  }
-  .section-services__list-item {
-    width: 23.5%;
-  }
-  .section-services__list-item:first-child,
-  .section-services__list-item:nth-child(2) {
-    margin-bottom: 0;
+    width: 32%;
   }
 }
 /*  SERVICE-CARD*/
@@ -641,9 +625,6 @@ img {
 }
 .service-card__title--transportation:after {
   background-image: url(../img/icons/icon-transportation.png);
-}
-.service-card__title--loading:after {
-  background-image: url(../img/icons/icon-loading.png);
 }
 .service-card__title--warehouse:after {
   background-image: url(../img/icons/icon-warehouse.png);
@@ -714,6 +695,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 20px 20px;
   }
   .service-card__arrow {
     width: 100px;
