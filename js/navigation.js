@@ -1,16 +1,16 @@
 /* NAVIGATION OPEN-CLOSE*/
 
 (function(){
-	// var mainNav = document.querySelector('.site-menu__navigation') В ГЛОБАЛЕ
-	// var menuBar = document.querySelector('.site-menu')  В ГЛОБАЛЕ
-	// var menuNumber = document.querySelector('.site-menu__numbers') В ГЛОБАЛЕ
-	var mainNavItem = document.querySelector('.site-menu__list-item')
-	var burger = document.querySelector('.site-menu__burger')
-	var numbersButton = document.querySelector('.site-menu__number-button')
-	var numbersArea = document.querySelector('.site-menu__number-list ')
+	// let mainNav = document.querySelector('.site-menu__navigation') В ГЛОБАЛЕ
+	// let menuBar = document.querySelector('.site-menu')  В ГЛОБАЛЕ
+	// let menuNumber = document.querySelector('.site-menu__numbers') В ГЛОБАЛЕ
+	let mainNavItem = document.querySelector('.site-menu__list-item')
+	let burger = document.querySelector('.site-menu__burger')
+	let numbersButton = document.querySelector('.site-menu__number-button')
+	let numbersArea = document.querySelector('.site-menu__number-list ')
 
-	var logo = document.querySelector('.logo')
-	var main = document.querySelector('main')
+	let logo = document.querySelector('.logo')
+	let main = document.querySelector('main')
 
 
 	function noScriptSiteMenu(){
@@ -46,8 +46,8 @@
 	window.addEventListener('gesturechange', menuFixing);
 
 	function menuFixing(){
-		var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop;
-		var needHeight = window.variables.menuBar.clientHeight;
+		let scrollHeight = document.documentElement.scrollTop || document.body.scrollTop;
+		let needHeight = window.variables.menuBar.clientHeight;
 		if (scrollHeight > 0) {
 			window.variables.menuBar.classList.add('site-menu--fixed');
 			main.style.marginTop = needHeight + 'px';

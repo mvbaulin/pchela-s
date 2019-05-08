@@ -1,14 +1,14 @@
 /* CALCULATOR */
 
 (function(){
-	var calculatorResult = document.querySelector('.calculator__result');
-	var distanceInput = document.querySelector('#calculator__distance');
+	let calculatorResult = document.querySelector('.calculator__result');
+	let distanceInput = document.querySelector('#calculator__distance');
 
-	var loaders = document.querySelector('#calculator__loaders');
-	var loadersTime = document.querySelector('#calculator__loaders-time');
-	var assemblers = document.querySelector('#calculator__assemblers');
-	var assemblersTime = document.querySelector('#calculator__assemblers-time');
-	
+	let loaders = document.querySelector('#calculator__loaders');
+	let loadersTime = document.querySelector('#calculator__loaders-time');
+	let assemblers = document.querySelector('#calculator__assemblers');
+	let assemblersTime = document.querySelector('#calculator__assemblers-time');
+
 
 	let calculatorSelects = document.querySelectorAll('.calculator select');
 

@@ -1,12 +1,12 @@
 /* MAIN-SLIDER */
 
 (function(){
-	// var mainSlider = document.querySelector('.main-slider'); В ГЛОБАЛЕ
-	var mainSliderPages = document.querySelectorAll('.main-slider__slider-page');
-	var mainSliderWrapper = document.querySelector('.main-slider__pages');
-	var mainSliderPrevBtn = document.querySelector('.main-slider__btn--prev');
-	var mainSliderNextBtn = document.querySelector('.main-slider__btn--next');
-	var mainSliderDots = document.querySelectorAll('.main-slider__dot');
+	// let mainSlider = document.querySelector('.main-slider'); В ГЛОБАЛЕ
+	let mainSliderPages = document.querySelectorAll('.main-slider__slider-page');
+	let mainSliderWrapper = document.querySelector('.main-slider__pages');
+	let mainSliderPrevBtn = document.querySelector('.main-slider__btn--prev');
+	let mainSliderNextBtn = document.querySelector('.main-slider__btn--next');
+	let mainSliderDots = document.querySelectorAll('.main-slider__dot');
 
 	function noScriptMainSlider(){
 		if (window.variables.mainSlider.classList.contains('main-slider--nojs')) {

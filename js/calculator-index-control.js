@@ -1,14 +1,12 @@
 /* CALCULATOR-BUTTONS*/
 
 (function(){
-	var calculatorArea = document.querySelector('.calculator');
-	var calculatorButton = document.querySelectorAll('.calculator__checkbox');
-	var calculatorHiddenAreas = document.querySelectorAll('.calculator__list--hidden');
-	var calculatorResultBox = document.querySelector('.calculator__result-wrapper');
+	let calculatorArea = document.querySelector('.section-calculator');
+	let calculatorButton = document.querySelectorAll('.calculator__checkbox');
+	let calculatorHiddenAreas = document.querySelectorAll('.calculator__list--hidden');
+	let calculatorResultBox = document.querySelector('.calculator__result-wrapper');
 
-
-
-	for (var i = 0; i < calculatorHiddenAreas.length; i++) {
+	for (let i = 0; i < calculatorHiddenAreas.length; i++) {
 		calculatorHiddenAreas[i];
 	}
 
@@ -25,7 +23,7 @@
 	}
 
 	window.addEventListener('scroll', function(){
-		if (calculatorArea.getBoundingClientRect().top - window.variables.menuBar.clientHeight  <= calculatorArea.offsetHeight && calculatorArea.getBoundingClientRect().bottom  >= 0) {
+		if (calculatorArea.getBoundingClientRect().top - calculatorArea.offsetHeight / calculatorArea.offsetHeight <= calculatorArea.offsetHeight && calculatorArea.getBoundingClientRect().bottom >= 0) {
 			calculatorResultBox.classList.add('calculator__result-wrapper--showed');
 		} else {
 			calculatorResultBox.classList.remove('calculator__result-wrapper--showed');
