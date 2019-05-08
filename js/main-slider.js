@@ -16,40 +16,51 @@
 		}
 	}
 
-	var mainSliderPosition = 0;
+	let mainSliderPosition = 0;
+	let currentDot = 0;
 
 	function mainSliderScroll(needWidthToScroll){
 		mainSliderPosition += needWidthToScroll;
+
 		if (mainSliderPosition > 0) {
 			mainSliderPosition = -(mainSliderPages.length * 100) + 100;
+			currentDot = mainSliderDots.length;
 		}
 		else if (mainSliderPosition < -(mainSliderPages.length * 100) + 100) {
 			mainSliderPosition = 0;
+			currentDot = 0 - 1;// ПОЧЕМУ ТУТ НАДО МИНУСОВАТЬ?
 		}
 		mainSliderWrapper.style.transform = "translateX("+ mainSliderPosition + "vw)";
 	}
 
 	mainSliderPrevBtn.addEventListener('click', function(){
 		mainSliderScroll(100);
+		currentDot--;
+		console.log(currentDot);
 	});
+
 
 	mainSliderNextBtn.addEventListener('click', function(){
 		mainSliderScroll(-100);
+		currentDot++;
+		console.log(currentDot);
 	});
 
 
+	for (let i = 0; i < mainSliderDots.length; i++) {
+		mainSliderDots[i].addEventListener('click', function(){
+			mainSliderDots.forEach(function addActiveToDot(item, index){
+				item.classList.remove('main-slider__dot--active');
+			})
+			mainSliderDots[i].classList.add('main-slider__dot--active');
 
-	mainSliderDots.forEach(function(item, index, array){
-		item.classList.remove('main-slider__dot--active');
-		console.log(item);
-		item.addEventListener('click', function(){
-			item.classList.add('main-slider__dot--active');
-			console.log(item);
-		});
-	});
+			mainSliderPosition = -i * 100;
+			currentDot = i;
 
-
-
+			mainSliderScroll(0);
+			console.log(currentDot);
+		})
+	}
 
 
 
