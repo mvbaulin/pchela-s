@@ -697,18 +697,6 @@ img {
     justify-content: space-between;
     padding: 20px 20px;
   }
-  .service-card__arrow {
-    width: 100px;
-    height: 100px;
-    right: -50px;
-    bottom: -50px;
-  }
-  .service-card__arrow:after {
-    width: 30px;
-    height: 30px;
-    top: 15px;
-    left: 15px;
-  }
 }
 @media (min-width: 1200px) {
   .service-card {
