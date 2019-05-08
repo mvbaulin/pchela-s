@@ -849,6 +849,7 @@ img {
   width: 50px;
   height: 20px;
   top: 30%;
+  background-color: red;
 }
 .calculator-slider__btn--prev {
   left: 0;
