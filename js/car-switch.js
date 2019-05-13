@@ -1,9 +1,9 @@
 /* CAR-SWITCH */
 
 (function(){
-	let carSliderPages = document.querySelectorAll('.calculator-slider__slider-page');
-	let carSliderPrevBtn = document.querySelector('.calculator-slider__btn--prev');
-	let carSliderNextBtn = document.querySelector('.calculator-slider__btn--next');
+	let carSliderPages = document.querySelectorAll('.calculator__slider-page');
+	let carSliderPrevBtn = document.querySelector('.calculator__slider-button--prev');
+	let carSliderNextBtn = document.querySelector('.calculator__slider-button--next');
 
 	let carSliderPosition = 0;
 
@@ -18,8 +18,8 @@
 		}
 
 		carSliderPages.forEach(function(item){
-			item.classList.remove('calculator-slider__slider-page--active');
-			carSliderPages[carSliderPosition].classList.add('calculator-slider__slider-page--active');
+			item.classList.remove('calculator__slider-page--active');
+			carSliderPages[carSliderPosition].classList.add('calculator__slider-page--active');
 		})
 	}
 
