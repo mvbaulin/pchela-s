@@ -1,9 +1,7 @@
-/* NAVIGATION OPEN-CLOSE*/
-
 (function(){
-	// let mainNav = document.querySelector('.site-menu__navigation') В ГЛОБАЛЕ
-	// let menuBar = document.querySelector('.site-menu')  В ГЛОБАЛЕ
-	// let menuNumber = document.querySelector('.site-menu__numbers') В ГЛОБАЛЕ
+
+	/* NAVIGATION OPEN-CLOSE*/
+
 	let mainNavItem = document.querySelector('.site-menu__list-item')
 	let burger = document.querySelector('.site-menu__burger')
 	let numbersButton = document.querySelector('.site-menu__number-button')
@@ -42,6 +40,7 @@
 
 
 	/* NAVIGATION-FIX */
+
 	window.addEventListener('scroll', menuFixing);
 	window.addEventListener('gesturechange', menuFixing);
 
@@ -57,6 +56,44 @@
 			main.style.marginTop = 0;
 		}
 	}
+
+
+	/* SCROLL TO CONTACTS */
+
+	let contactsButton = document.querySelector('#to-contacts-button');
+	let contacsArea = document.querySelector('.main-footer');
+
+	contactsButton.style.cursor = 'pointer';
+
+	contactsButton.addEventListener('click', function(){
+		scrollToContacts();
+	})
+
+	function scrollToContacts(n){
+		let getDistance = contacsArea.offsetTop -window.variables.menuBar.clientHeight;
+
+		let timer = setTimeout(function(){
+			scrollToContacts(n);
+		}, 1);
+
+		window.addEventListener('wheel', function(){
+			clearTimeout(timer);
+		})
+
+		document.body.addEventListener('touchmove', function(){
+			clearTimeout(timer);
+		})
+
+		if (document.documentElement.scrollTop <= getDistance || document.body.scrollTop <= getDistance) {
+			document.documentElement.scrollTop += 10;
+			document.body.scrollTop += 10;
+		}
+
+		if (document.documentElement.scrollTop >= getDistance || document.body.scrollTop >= getDistance) {
+			clearTimeout(timer);
+		}
+	}
+
 
 	noScriptSiteMenu();
 })()

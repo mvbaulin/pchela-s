@@ -51,6 +51,10 @@ img {
   display: block;
   width: 140px;
 }
+.logo:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 5px #fcda00;
+}
 .logo__image {
   display: block;
 }
@@ -105,14 +109,6 @@ img {
   border: 3px solid #333333;
   border-radius: 30px;
   cursor: pointer;
-  transition: 0.5s;
-}
-.site-menu__number-button:focus {
-  outline: none;
-  box-shadow: 0px 0px 15px 0px #fcda00;
-}
-.site-menu__number-button:active {
-  box-shadow: 0px 0px 15px 0px #fcda00;
 }
 .site-menu__number-button:before {
   position: absolute;
@@ -124,6 +120,10 @@ img {
   height: 30px;
   background-image: url(../img/icons/phone.svg);
   background-repeat: no-repeat;
+}
+.site-menu__number-button:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 5px #fcda00;
 }
 .site-menu__number-button--active {
   background-image: url(../img/icons/phone-dropdown--active.svg);
@@ -161,6 +161,10 @@ img {
   font-weight: bold;
   text-decoration: none;
   color: #fcda00;
+}
+.site-menu__number:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 5px #fcda00;
 }
 .site-menu__numbers--nojs .site-menu__number-button {
   display: none;
@@ -225,12 +229,10 @@ img {
   left: 0;
   box-shadow: 0px 10px 0px 0px #ffffff, 0px -10px 0px 0px #ffffff;
 }
-.site-menu__burger:focus {
-  outline: none;
-  box-shadow: 0px 0px 5px 2px #fcda00;
-}
+.site-menu__burger:focus,
 .site-menu__burger:active {
-  box-shadow: 0px 0px 5px 2px #fcda00;
+  outline: none;
+  box-shadow: 0px 0px 0px 5px #fcda00;
 }
 .site-menu__navigation {
   display: none;
@@ -257,6 +259,10 @@ img {
   padding: 20px 0;
   font-size: 20px;
   font-weight: bold;
+}
+.site-menu__link:focus {
+  outline: none;
+  background-color: #fcda00;
 }
 .site-menu__navigation--nojs {
   position: static;
@@ -452,10 +458,10 @@ img {
 .main-slider__btn {
   position: absolute;
   top: 0;
+  padding: 0;
   height: 100%;
   width: 15%;
   border: none;
-  padding: 0;
   background-color: rgba(0, 0, 0, 0.05);
   background-image: url(../img/icons/slider-arrow.svg);
   background-repeat: no-repeat;
@@ -467,6 +473,7 @@ img {
 .main-slider__btn:active,
 .main-slider__btn:focus {
   outline: none;
+  background-color: rgba(255, 215, 0, 0.5);
 }
 .main-slider__btn:hover {
   background-color: rgba(0, 0, 0, 0.2);
@@ -514,6 +521,7 @@ img {
 .main-slider__dot:active,
 .main-slider__dot:focus {
   outline: none;
+  box-shadow: 0px 0px 0px 5px #fcda00;
 }
 .main-slider__dot--active {
   position: relative;
@@ -594,12 +602,12 @@ img {
   transition: 0.5s;
 }
 .service-card:hover {
-  box-shadow: 0px 0px 30px -10px #fcda00;
+  box-shadow: 0px 0px 10px 0px #fcda00;
   cursor: pointer;
 }
 .service-card:focus {
   outline: none;
-  box-shadow: 0px 0px 30px -10px #fcda00;
+  box-shadow: 0px 0px 0px 5px #fcda00;
 }
 .service-card__title {
   position: relative;
@@ -732,9 +740,11 @@ img {
 .section-about-us__description {
   margin: 0;
   padding: 0;
+  font-size: 20px;
+  line-height: 25px;
 }
 .section-about-us__description:first-child {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 @media (min-width: 1200px) {
   .section-about-us__wrapper {
@@ -755,6 +765,7 @@ img {
   line-height: 35px;
   font-weight: bold;
   padding: 5px 25px;
+  background-color: #ffffff;
   border: 2px solid #fcda00;
   border-radius: 50px;
   -webkit-appearance: none;
@@ -763,7 +774,7 @@ img {
 }
 .input:focus {
   outline: none;
-  box-shadow: 0px 0px 10px 0px #fcda00;
+  box-shadow: 0px 0px 0px 5px #fcda00;
 }
 @media (min-width: 1200px) {
   .input {
@@ -884,6 +895,7 @@ img {
 }
 .calculator__slider-button:focus {
   outline: none;
+  background-color: rgba(255, 215, 0, 0.5);
 }
 .calculator__slider-button--prev {
   border-radius: 0px 10px 0px 00px;
@@ -972,7 +984,7 @@ img {
   height: 5px;
 }
 .calculator__checkbox:checked + .calculator__button-close {
-  background-color: red;
+  background-color: tomato;
 }
 .calculator__checkbox:checked + .calculator__button-close:before,
 .calculator__checkbox:checked + .calculator__button-close:after {
@@ -983,6 +995,14 @@ img {
 }
 .calculator__checkbox:checked + .calculator__button-close:after {
   width: 27px;
+}
+.calculator__checkbox:focus + .calculator__button-close {
+  outline: none;
+  box-shadow: 0px 0px 0px 5px tomato;
+}
+.calculator__checkbox:checked:focus + .calculator__button-close {
+  outline: none;
+  box-shadow: 0px 0px 0px 5px #fcda00;
 }
 @media (min-width: 768px) {
   .calculator__wrapper {
@@ -1124,7 +1144,7 @@ img {
 }
 .button:focus {
   outline: none;
-  box-shadow: 0px 0px 10px 0px #fcda00;
+  box-shadow: 0px 0px 0px 5px #ffffff;
 }
 @media (min-width: 1200px) {
   .button {
@@ -1172,7 +1192,7 @@ img {
 }
 .echo-form__message:focus {
   outline: none;
-  box-shadow: 0px 0px 10px 0px #fcda00;
+  box-shadow: 0px 0px 0px 5px #fcda00;
 }
 .echo-form__button {
   margin: 0 auto;
@@ -1222,6 +1242,10 @@ img {
   font-size: 30px;
   line-height: 40px;
 }
+.main-footer__phone:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 5px #fcda00;
+}
 .main-footer__description {
   margin: 0;
   padding: 0;
@@ -1247,9 +1271,12 @@ img {
   padding: 0;
 }
 .main-footer__map {
-  margin: 0 auto;
-  width: 100%;
-  height: 300px;
+  background-image: url(../img/map-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-footer__map:focus {
+  outline: none;
 }
 .main-footer__about-wrapper {
   text-align: center;
@@ -1282,6 +1309,10 @@ img {
   font-size: 20px;
   line-height: 25px;
 }
+.main-footer__email:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #fcda00;
+}
 .main-footer__copyright {
   display: block;
 }
@@ -1291,7 +1322,8 @@ img {
     margin: 0 auto;
   }
   .main-footer__map {
-    height: 500px;
+    height: auto;
+    background-image: url(../img/map.jpg);
   }
   .main-footer__email {
     width: 50%;
@@ -1312,15 +1344,21 @@ img {
   background-color: #333333;
   background-position: center;
   background-repeat: no-repeat;
+  transition: 0.5s;
 }
-.social-link__link:hover,
+.social-link__link:hover {
+  background-color: #fcda00;
+}
 .social-link__link:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 3px #fcda00;
+  box-shadow: 0px 0px 0px 5px #fcda00;
 }
 .social-link--vk .social-link__link {
   background-image: url(../img/icons/vk.svg);
   background-size: 130%;
+}
+.social-link--fb {
+  display: none;
 }
 .social-link--fb .social-link__link {
   background-image: url(../img/icons/fb.svg);

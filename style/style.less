@@ -19,9 +19,9 @@ body {
 	color: @color-black;
 }
 
-* {
-	//outline: 1px solid red;
-}
+// *:focus {
+// 	outline: 1px solid red;
+// }
 
 .container {
 	max-width: 300px;
@@ -94,6 +94,10 @@ img {
 .logo {
 	display: block;
 	width: 140px;
+	&:focus {
+		outline: none;
+		box-shadow: 0px 0px 0px 5px @color-yellow;
+	}
 }
 
 .logo__image {
@@ -165,14 +169,6 @@ img {
 	border: 3px solid @color-grey;
 	border-radius: 30px;
 	cursor: pointer;
-	transition: 0.5s;
-	&:focus {
-		outline: none;
-		box-shadow: 0px 0px 15px 0px @color-yellow;
-	}
-	&:active {
-		box-shadow: 0px 0px 15px 0px @color-yellow;
-	}
 	&:before {
 		position: absolute;
 		content: "";
@@ -183,6 +179,10 @@ img {
 		height: 30px;
 		background-image: url(../img/icons/phone.svg);
 		background-repeat: no-repeat;
+	}
+	&:focus {
+		outline: none;
+		box-shadow: 0px 0px 0px 5px @color-yellow;
 	}
 }
 
@@ -231,7 +231,10 @@ img {
 	font-weight: bold;
 	text-decoration: none;
 	color: @color-yellow;
-	// display: none;
+	&:focus {
+		outline: none;
+		box-shadow: 0px 0px 0px 5px @color-yellow;
+	}
 }
 
 .site-menu__numbers--nojs .site-menu__number-button  {
@@ -302,12 +305,10 @@ img {
 		box-shadow: 0px 10px 0px 0px @color-white,
 		0px -10px 0px 0px @color-white;
 	}
-	&:focus {
-		outline: none;
-		box-shadow: 0px 0px 5px 2px @color-yellow;
-	}
+	&:focus,
 	&:active {
-		box-shadow: 0px 0px 5px 2px @color-yellow;
+		outline: none;
+		box-shadow: 0px 0px 0px 5px @color-yellow;
 	}
 }
 
@@ -339,6 +340,10 @@ img {
 	padding: 20px 0;
 	font-size: 20px;
 	font-weight: bold;
+	&:focus {
+		outline: none;
+		background-color: @color-yellow;
+	}
 }
 
 .site-menu__navigation--nojs {
@@ -493,7 +498,6 @@ img {
 		}
 		&--active {
 			position: relative;
-			// display: block;
 			.site-menu__link {
 				cursor: default;
 				color: @color-grey;
@@ -560,7 +564,6 @@ img {
 }
 
 
-
 .main-slider__slider-page {
 	width: 100vw;
 	line-height: 0;
@@ -583,10 +586,10 @@ img {
 .main-slider__btn {
 	position: absolute;
 	top: 0;
+	padding: 0;
 	height: 100%;
 	width: 15%;
 	border: none;
-	padding: 0;
 	background-color: rgba(0, 0 ,0, 0.05);
 	background-image: url(../img/icons/slider-arrow.svg);
 	background-repeat: no-repeat;
@@ -597,6 +600,7 @@ img {
 	&:active,
 	&:focus {
 		outline: none;
+		background-color: rgba(255, 215 , 0, 0.5);
 	}
 	&:hover {
 		background-color: rgba(0, 0 ,0, 0.2);
@@ -655,6 +659,7 @@ img {
 	&:active,
 	&:focus {
 		outline: none;
+		box-shadow: 0px 0px 0px 5px @color-yellow;
 	}
 }
 
@@ -765,12 +770,12 @@ img {
 	overflow: hidden;
 	transition: 0.5s;
 	&:hover {
-		box-shadow: 0px 0px 30px -10px @color-yellow;
+		box-shadow: 0px 0px 10px 0px @color-yellow;
 		cursor: pointer;
 	}
 	&:focus {
 		outline: none;
-		box-shadow: 0px 0px 30px -10px @color-yellow;
+		box-shadow: 0px 0px 0px 5px @color-yellow;
 	}
 }
 
@@ -934,8 +939,10 @@ img {
 .section-about-us__description {
 	margin: 0;
 	padding: 0;
+	font-size: 20px;
+	line-height: 25px;
 	&:first-child {
-		margin-bottom: 10px;
+		margin-bottom: 30px;
 	}
 }
 
@@ -962,6 +969,7 @@ img {
 	line-height: 35px;
 	font-weight: bold;
 	padding: 5px 25px;
+	background-color: @color-white;
 	border: 2px solid @color-yellow;
 	border-radius: 50px;
 	-webkit-appearance: none;
@@ -969,7 +977,7 @@ img {
 	cursor: pointer;
 	&:focus {
 		outline: none;
-		box-shadow: 0px 0px 10px 0px @color-yellow;
+		box-shadow: 0px 0px 0px 5px @color-yellow;
 	}
 }
 
@@ -1133,6 +1141,7 @@ img {
 	}
 	&:focus {
 		outline: none;
+		background-color: rgba(255, 215, 0, 0.5);
 	}
 }
 
@@ -1248,7 +1257,7 @@ img {
 }
 
 .calculator__checkbox:checked + .calculator__button-close {
-	background-color: red;
+	background-color: tomato;
 	&:before,
 	&:after {
 		transform: translate(-50%, -50%) rotate(135deg);
@@ -1262,7 +1271,13 @@ img {
 }
 
 .calculator__checkbox:focus + .calculator__button-close{
-	//ДОБАВИТЬ ТЕНЬ
+	outline: none;
+	box-shadow: 0px 0px 0px 5px tomato;
+}
+
+.calculator__checkbox:checked:focus + .calculator__button-close{
+	outline: none;
+	box-shadow: 0px 0px 0px 5px @color-yellow;
 }
 
 @media (min-width: @width-tablet) {
@@ -1463,7 +1478,7 @@ img {
 	cursor: pointer;
 	&:focus {
 		outline: none;
-		box-shadow: 0px 0px 10px 0px @color-yellow;
+		box-shadow: 0px 0px 0px 5px @color-white;
 	}
 }
 
@@ -1532,7 +1547,7 @@ img {
 	resize: none;
 	&:focus {
 		outline: none;
-		box-shadow: 0px 0px 10px 0px @color-yellow;
+		box-shadow: 0px 0px 0px 5px @color-yellow;
 	}
 }
 
@@ -1586,8 +1601,6 @@ img {
 	text-align: center;
 }
 
-
-
 .main-footer__phone {
 	display: block;
 	margin-bottom: 20px;
@@ -1596,7 +1609,10 @@ img {
 	font-weight: bold;
 	font-size: 30px;
 	line-height: 40px;
-
+	&:focus {
+		outline: none;
+		box-shadow: 0px 0px 0px 5px @color-yellow;
+	}
 }
 
 .main-footer__description {
@@ -1628,9 +1644,12 @@ img {
 }
 
 .main-footer__map {
-	margin: 0 auto;
-	width: 100%;
-	height: 300px;
+	background-image: url(../img/map-mobile.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	&:focus {
+		outline: none;
+	}
 }
 
 .main-footer__about {
@@ -1670,6 +1689,10 @@ img {
 	text-decoration: underline;
 	font-size: 20px;
 	line-height: 25px;
+	&:focus {
+		outline: none;
+		box-shadow: 0px 0px 0px 2px @color-yellow;
+	}
 }
 
 .main-footer__copyright {
@@ -1684,7 +1707,8 @@ img {
 	}
 
 	.main-footer__map {
-		height: 500px;
+		height: auto;
+		background-image: url(../img/map.jpg);
 	}
 
 	.main-footer__email {
@@ -1693,6 +1717,8 @@ img {
 		margin-left: auto;
 	}
 }
+
+
 
 /* SOCIAL-LINK */
 
@@ -1709,28 +1735,37 @@ img {
 	background-color: @color-grey;
 	background-position: center;
 	background-repeat: no-repeat;
-	&:hover,
-	&:focus{
+	transition: 0.5s;
+	&:hover {
+		background-color: @color-yellow;
+	}
+	&:focus {
 		outline: none;
-		box-shadow: 0px 0px 0px 3px @color-yellow;
+		box-shadow: 0px 0px 0px 5px @color-yellow;
 	}
 }
 
-.social-link--vk .social-link__link{
-	background-image: url(../img/icons/vk.svg);
-	background-size: 130%;
+.social-link--vk {
+	.social-link__link {
+		background-image: url(../img/icons/vk.svg);
+		background-size: 130%;
+	}
 }
 
-.social-link--fb .social-link__link{
-	background-image: url(../img/icons/fb.svg);
-	background-size: 50%;
+.social-link--fb {
+	display: none;
+	.social-link__link {
+		background-image: url(../img/icons/fb.svg);
+		background-size: 50%;
+	}
 }
 
-.social-link--inst .social-link__link{
-	background-image: url(../img/icons/inst.svg);
-	background-size: 150%;
+.social-link--inst {
+	.social-link__link{
+	    background-image: url(../img/icons/inst.svg);
+	    background-size: 150%;
+    }
 }
-
 
 
 /*  ABOUT-COMPANY PAGE*/
