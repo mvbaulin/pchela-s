@@ -38,12 +38,10 @@
 
 	mainSliderPrevBtn.addEventListener('click', function(){
 		mainSliderScroll(100, -1);
-		console.log(currentDot);
 	});
 
 	mainSliderNextBtn.addEventListener('click', function(){
 		mainSliderScroll(-100, 1);
-		console.log(currentDot);
 	});
 
 	for (let i = 0; i < mainSliderDots.length; i++) {
@@ -57,7 +55,6 @@
 			mainSliderDots[currentDot].classList.add('main-slider__dot--active');
 
 			mainSliderWrapper.style.transform = "translateX("+ mainSliderPosition + "vw)";
-			console.log(currentDot);
 		})
 	}
 

@@ -237,27 +237,29 @@
 								Выбор машины
 							</legend>
 							<div class="calculator__slider">
-								<div class="calculator__slider-page calculator__slider-page--active">
-									<div class="calculator__image-wrapper">
-										<img class="calculator__image" src="img/calculator/car-slider-1.jpg" alt="Первая машина">
+								<div class="calculator__slider-wrapper">
+									<div class="calculator__slider-page calculator__slider-page--active">
+										<div class="calculator__image-wrapper">
+											<img class="calculator__image" src="img/calculator/car-slider-1.jpg" alt="Первая машина">
+										</div>
 									</div>
-								</div>
-								<div class="calculator__slider-page">
-									<div class="calculator__image-wrapper">
-										<img class="calculator__image" src="img/calculator/car-slider-2.jpg" alt="Вторая машина">
+									<div class="calculator__slider-page">
+										<div class="calculator__image-wrapper">
+											<img class="calculator__image" src="img/calculator/car-slider-2.jpg" alt="Вторая машина">
+										</div>
 									</div>
-								</div>
-								<div class="calculator__car-navigation">
-									<button class="calculator__slider-button calculator__slider-button--prev" type="button">
-										<span class="visually-hidden">
-											Предыдущая машина
-										</span>
-									</button>
-									<button class="calculator__slider-button calculator__slider-button--next" type="button">
-										<span class="visually-hidden">
-											Следующая машина
-										</span>
-									</button>
+									<div class="calculator__car-navigation">
+										<button class="calculator__slider-button calculator__slider-button--prev" type="button">
+											<span class="visually-hidden">
+												Предыдущая машина
+											</span>
+										</button>
+										<button class="calculator__slider-button calculator__slider-button--next" type="button">
+											<span class="visually-hidden">
+												Следующая машина
+											</span>
+										</button>
+									</div>
 								</div>
 								<table class="calculator__car-property-table">
 									<tbody>
@@ -265,32 +267,40 @@
 											<td class="calculator__car-property">
 												Автомобиль:
 											</td>
-											<td class="calculator__car-value">
-												Название
+											<td class="calculator__car-value" id="car-name">
+
 											</td>
 										</tr>
 										<tr>
 											<td class="calculator__car-property">
 												Мест для пассажиров:
 											</td>
-											<td class="calculator__car-value">
-												5
+											<td class="calculator__car-value" id="car-passengers">
+
 											</td>
 										</tr>
 										<tr>
 											<td class="calculator__car-property">
 												Габариты:
 											</td>
-											<td class="calculator__car-value">
-												20х20х20
+											<td class="calculator__car-value" id="car-size">
+
 											</td>
 										</tr>
 										<tr>
 											<td class="calculator__car-property">
 												Вместимость:
 											</td>
-											<td class="calculator__car-value">
-												2 тонны
+											<td class="calculator__car-value" id="car-tonnage">
+
+											</td>
+										</tr>
+										<tr class="visually-hidden">
+											<td class="calculator__car-property">
+												Цена:
+											</td>
+											<td class="calculator__car-value" id="car-price">
+
 											</td>
 										</tr>
 									<tbody>
@@ -307,9 +317,7 @@
 										Время на машину:
 									</label>
 									<select class="input calculator__input" id="calculator__car-time">
-										<option value="1" selected>1 час</option>
-										<option value="2">2 часа</option>
-										<option value="3">3 часа</option>
+										<option value="3" selected>3 часа</option>
 										<option value="4">4 часа</option>
 										<option value="5">5 часов</option>
 										<option value="6">6 часов</option>
@@ -341,7 +349,7 @@
 										Количество:
 									</label>
 									<select class="input calculator__input" id="calculator__loaders">
-										<option value="0" selected>Не нужны</option>
+										<option value="0">Не нужны</option>
 										<option value="1">1 человек</option>
 										<option value="2">2 человека</option>
 										<option value="3">3 человека</option>
@@ -352,7 +360,7 @@
 										Время:
 									</label>
 									<select class="input calculator__input" id="calculator__loaders-time">
-										<option value="3" selected>3 часа</option>
+										<option value="3">3 часа</option>
 										<option value="4">4 часа</option>
 										<option value="5">5 часов</option>
 										<option value="6">6 часов</option>
@@ -399,7 +407,7 @@
 							</ul>
 						</fieldset>
 						<div class="calculator__result-wrapper">
-							<span class="calculator__result">____</span>
+							<span class="calculator__result">Включите JavaScript</span>
 							<span class="calculator__result-rub">руб.</span>
 						</div>
 					</div>
@@ -516,7 +524,6 @@
 <script src="js/navigation.js"></script>
 <script src="js/main-slider.js"></script>
 <script src="js/calculator-index-control.js"></script>
-<script src="js/car-switch.js"></script>
 <script src="js/calculator.js"></script>
 </body>
 </html>

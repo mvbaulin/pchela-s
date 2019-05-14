@@ -1,71 +1,106 @@
-/* CALCULATOR */
-
 (function(){
+
+	/* CAR-SWITCH */
+
+	let carSliderPages = document.querySelectorAll('.calculator__slider-page');
+	let carSliderPrevBtn = document.querySelector('.calculator__slider-button--prev');
+	let carSliderNextBtn = document.querySelector('.calculator__slider-button--next');
+
+	let carName = document.querySelector('#car-name');
+	let carPassengers = document.querySelector('#car-passengers');
+	let carSize = document.querySelector('#car-size');
+	let carTonnage = document.querySelector('#car-tonnage');
+
+
+	cars = [
+		['Газель Некст', 6, '4x2x2.15м', '2 тонны', 850],
+		['Газель 2', 4,  '2x3x2.20м', '1 тонна', 900]
+	];
+
+	let carSliderPosition = 0;
+
+	function carSlidersSwitch(direction){
+		name = 0;
+		passengers = 1;
+		size = 2;
+		tonnage = 3;
+		price = 4;
+
+		carSliderPosition += direction;
+
+		if (carSliderPosition < 0) {
+			carSliderPosition = carSliderPages.length - 1;
+		}
+		else if (carSliderPosition > carSliderPages.length -1) {
+			carSliderPosition = 0;
+		}
+
+		carSliderPages.forEach(function(item){
+			item.classList.remove('calculator__slider-page--active');
+			carSliderPages[carSliderPosition].classList.add('calculator__slider-page--active');
+		})
+		carName.textContent = cars[carSliderPosition][name];
+		carPassengers.textContent = cars[carSliderPosition][passengers];
+		carSize.textContent = cars[carSliderPosition][size];
+		carTonnage.textContent = cars[carSliderPosition][tonnage];
+		window.variables.carPrice.textContent = cars[carSliderPosition][price];
+	}
+
+	carSliderPrevBtn.addEventListener('click', function(){
+		carSlidersSwitch(-1);
+		changeTotalPrice();
+	})
+
+	carSliderNextBtn.addEventListener('click', function(){
+		carSlidersSwitch(1);
+		changeTotalPrice();
+	})
+
+	carSlidersSwitch(0);
+
+
+
+
+	/* CALCULATOR */
+
 	let calculatorResult = document.querySelector('.calculator__result');
 	let distanceInput = document.querySelector('#calculator__distance');
-
+	let carTime = document.querySelector('#calculator__car-time');
 	let loaders = document.querySelector('#calculator__loaders');
 	let loadersTime = document.querySelector('#calculator__loaders-time');
 	let assemblers = document.querySelector('#calculator__assemblers');
 	let assemblersTime = document.querySelector('#calculator__assemblers-time');
 
 
-	let calculatorSelects = document.querySelectorAll('.calculator select');
-
-
 	let distancePrice = 33,
-		distanceStartedPrice = 5000,
 		loadersPricePerHour = 270,
 		assemblersPricePerHour = 450;
 
-	let loadersCount = 0,
-		loadersTimeCount = 0,
-		assemblersCount = 0,
-		assemblersTimeCount = 0;
 
-	for (let i = 0; i < calculatorSelects.length; i++) {
-		calculatorSelects[i].addEventListener('change', function(){
-			loadersCount = loaders.options[loaders.selectedIndex].value;
-			loadersTimeCount = loadersTime.options[loadersTime.selectedIndex].value;
-			assemblersCount = assemblers.options[assemblers.selectedIndex].value;
-			assemblersTimeCount = assemblersTime.options[assemblersTime.selectedIndex].value;
-			// console.log('loadersCount: ' + loadersCount);
-			// console.log('loadersTimeCount: ' + loadersTimeCount);
-			// console.log('assemblersCount: ' + assemblersCount);
-			// console.log('assemblersTimeCount: ' + assemblersTimeCount);
-			calculatePrice();
-		})
+	totalPrice = 0;
+
+	calculatorResult.addEventListener('input', changeTotalPrice);
+	carTime.addEventListener('input', changeTotalPrice);
+	distanceInput.addEventListener('input', changeTotalPrice);
+	loaders.addEventListener('input', changeTotalPrice);
+	loadersTime.addEventListener('input', changeTotalPrice);
+	assemblers.addEventListener('input', changeTotalPrice);
+	assemblersTime.addEventListener('input', changeTotalPrice);
+
+
+	function changeTotalPrice(carSum, distance, loadersSum, assemblersSum){
+		carSum = carTime.value * parseInt(window.variables.carPrice.textContent, 10);
+		distance = distanceInput.value * distancePrice;
+		loadersSum = parseInt(loaders.value * loadersTime.value, 10) * loadersPricePerHour;
+		assemblersSum = parseInt(assemblers.value * assemblersTime.value, 10) * assemblersPricePerHour;
+
+		totalPrice = carSum + distance + loadersSum + assemblersSum;
+		calculatorResult.textContent = totalPrice;
 	}
 
 
-	distanceInput.addEventListener('input', calculateDistance);
-	distanceInput.addEventListener('change', calculatePrice);
 
-	let distanceCount;
-	function calculateDistance(){
-		distanceCount = (distanceInput.value * distancePrice) + distanceStartedPrice;
-		return distanceCount;
-	}
+	changeTotalPrice();
 
 
-	let loadersPrice = 0;
-	function calculateLoaders(){
-		loadersPrice = loadersCount * loadersTimeCount * loadersPricePerHour;
-		return loadersPrice;
-	}
-
-
-	let assemblersPrice = 0;
-	function calculateAssemblers(){
-		assemblersPrice = assemblersCount * assemblersTimeCount * assemblersPricePerHour;
-		return assemblersPrice;
-	}
-
-
-	let result = distanceStartedPrice;
-	calculatorResult.textContent = distanceStartedPrice;
-	function calculatePrice(){
-		result = calculateAssemblers() + calculateLoaders() + calculateDistance();
-		calculatorResult.textContent = result;
-	}
 })()
