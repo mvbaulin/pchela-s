@@ -5,6 +5,9 @@ body {
   background-color: #ffffff;
   color: #000000;
 }
+*:focus {
+  outline: 10px solid red;
+}
 .container {
   max-width: 300px;
   margin: 0 auto;
