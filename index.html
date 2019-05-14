@@ -105,24 +105,13 @@
 		<section class="slider main-slider main-slider--nojs">
 			<div class="main-slider__pages">
 				<div class="main-slider__slider-page">
-					<div class="main-slider__image-wrapper">
-						<img class="main-slider__image" src="img/main-slider/slider-move.jpg" alt="Переезды">
-					</div>
+					<h2 class="main-slider__page-title">Slider Text</h2>
 				</div>
 				<div class="main-slider__slider-page">
-					<div class="main-slider__image-wrapper">
-						<img class="main-slider__image" src="img/main-slider/slider-transportation.jpg" alt="Транспортировка">
-					</div>
+					<h2 class="main-slider__page-title">Slider Text</h2>
 				</div>
 				<div class="main-slider__slider-page">
-					<div class="main-slider__image-wrapper">
-						<img class="main-slider__image" src="img/main-slider/slider-loading.jpg" alt="Погрузки">
-					</div>
-				</div>
-				<div class="main-slider__slider-page">
-					<div class="main-slider__image-wrapper">
-						<img class="main-slider__image" src="img/main-slider/slider-warehouse.jpg" alt="Складские услуги">
-					</div>
+					<h2 class="main-slider__page-title">Slider Text</h2>
 				</div>
 			</div>
 			<div class="main-slider__navigation">
@@ -138,7 +127,6 @@
 				</button>
 				<div class="main-slider__dots">
 					<button class="main-slider__dot main-slider__dot--active" type="button"></button>
-					<button class="main-slider__dot" type="button"></button>
 					<button class="main-slider__dot" type="button"></button>
 					<button class="main-slider__dot" type="button"></button>
 				</div>
@@ -421,7 +409,7 @@
 				<h2 class="section-title section-echo__section-title">
 					Закажите звонок
 				</h2>
-				<form class="echo-form" id="echo-form" action="#">
+				<form class="echo-form" id="echo-form" action="php/send.php" method="post">
 					<div class="echo-form__wrapper">
 						<fieldset class="echo-form__field">
 							<legend class="echo-form__field-legend visually-hidden">
@@ -432,13 +420,13 @@
 									<label class="echo-form__label" for="echo__name">
 										Ваше имя:
 									</label>
-									<input class="input input--white echo-form__input" id="echo__name" type="text" required placeholder="Имя и фамилия" minlength="3">
+									<input class="input input--white echo-form__input" id="echo__name" type="text" required placeholder="Имя и фамилия" minlength="3" name="fullname">
 								</li>
 								<li class="echo-form__list-item">
 									<label class="echo-form__label" for="echo__phone">
 										Телефон:
 									</label>
-									<input class="input input--white echo-form__input" id="echo__phone" type="tel" required placeholder="+7__________">
+									<input class="input input--white echo-form__input" id="echo__phone" type="tel" required placeholder="+7__________" name="phone-number">
 								</li>
 							</ul>
 						</fieldset>
@@ -456,6 +444,7 @@
 								Подтверждение
 							</legend>
 							<input class="button echo-form__button" form="echo-form" type="submit" value="Позвоните мне">
+							<p class="echo-form__info-message">Warning</p>
 						</fieldset>
 					</div>
 				</form>
