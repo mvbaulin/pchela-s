@@ -730,6 +730,7 @@ img {
   right: -40px;
   bottom: -40px;
   border-radius: 50%;
+  z-index: 20;
 }
 .service-card__arrow:after {
   position: absolute;
