@@ -814,34 +814,38 @@ img {
     left: 11px;
   }
 }
-/* SECTION-ABOUT-US */
-.section-about-us__section-title {
-  margin-bottom: 20px;
-}
-.section-about-us__content {
+/* SITE-TEXT_CONTENT */
+.site-text-content {
   padding: 20px 20px;
   border-radius: 10px;
   background-color: #ffffff;
   box-shadow: 0px 0px 15px -10px #000000;
 }
-.section-about-us__description {
+.site-text-content__text {
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
   font-size: 20px;
   line-height: 25px;
 }
-.section-about-us__description:first-child {
-  margin-bottom: 30px;
+.site-text-content__text:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 1200px) {
+  .site-text-content {
+    padding: 40px;
+    border-radius: 20;
+    box-shadow: 0px 0px 15px -14px #000000;
+  }
+}
+/* SECTION-ABOUT-US */
+.section-about-us__section-title {
+  margin-bottom: 20px;
 }
 @media (min-width: 1200px) {
   .section-about-us__wrapper {
     margin: 0 auto;
     max-width: 75%;
-  }
-  .section-about-us__content {
-    padding: 40px;
-    border-radius: 20;
-    box-shadow: 0px 0px 15px -14px #000000;
   }
 }
 /*  INPUT*/
@@ -1507,10 +1511,6 @@ img {
 .about-company-section__title {
   margin-bottom: 10px;
 }
-.about-company-section__description {
-  margin: 0;
-  padding: 0;
-}
 .gallery-section {
   margin-top: 0;
 }
@@ -1536,10 +1536,6 @@ img {
   box-shadow: 0px 0px 0px 5px #fcda00;
 }
 @media (min-width: 768px) {
-  .about-company-section__description {
-    font-size: 18px;
-    line-height: 25px;
-  }
   .gallery-section__gallery {
     display: -webkit-flex;
     display: -ms-flex;
@@ -1558,5 +1554,59 @@ img {
   }
   .gallery-section__item {
     max-width: 18%;
+  }
+}
+/*  SERVICES PAGE*/
+.section-our-services__title {
+  margin-bottom: 20px;
+}
+.section-our-services__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.section-our-services__service-title {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: center;
+}
+.section-our-services__service-title:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.section-our-services__service-title--move:before {
+  background-image: url(../img/icons/cards/moving-colored.svg);
+}
+.section-our-services__service-title--transportation:before {
+  background-image: url(../img/icons/cards/transportation-colored.svg);
+}
+.section-our-services__service-title--warehouse:before {
+  background-image: url(../img/icons/cards/warehouse-colored.svg);
+}
+@media (min-width: 768px) {
+  .section-our-services__service-title {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    padding-bottom: 100px;
+  }
+  .section-our-services__service-title:before {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100px;
+    height: 100px;
   }
 }
