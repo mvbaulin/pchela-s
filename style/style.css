@@ -549,6 +549,7 @@ img {
   cursor: pointer;
   border-radius: 50%;
   background-color: #333333;
+  transition: 0.3s;
 }
 .main-slider__dot:active,
 .main-slider__dot:focus {
@@ -857,6 +858,7 @@ img {
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
+  transition: 0.5s;
 }
 .input--white {
   border: 2px solid #ffffff;
@@ -982,12 +984,14 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20%;
+  transition: 0.5s;
 }
 .calculator__slider-button:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .calculator__slider-button:focus {
   outline: none;
+  background-image: url(../img/icons/car-switch-arrow-focus.svg);
   background-color: rgba(255, 215, 0, 0.5);
 }
 .calculator__slider-button--prev {
@@ -1239,6 +1243,7 @@ img {
   border-radius: 30px;
   background-color: #fcda00;
   cursor: pointer;
+  transition: 0.5s;
 }
 .button:focus {
   outline: none;
@@ -1290,6 +1295,7 @@ img {
   line-height: 30px;
   font-weight: bold;
   resize: none;
+  transition: 0.5s;
 }
 .echo-form__message:focus {
   outline: none;
