@@ -4,23 +4,41 @@
 
 	let pages = document.querySelectorAll('.section-news__page');
 	let paginationButtons = document.querySelectorAll('.section-news__pagination-button');
+	let news = document.querySelectorAll('.section-news__new');
 
 
-	// showPage(pages[0]);
+	for (let i = 0; i < news.length; i++) {
+		news[i].children[0].removeAttribute('href');
+	}
 
 	for (let i = 0; i < paginationButtons.length; i++) {
-		paginationButtons[i].addEventListener('click', function(event){
-			event.preventDefault();
-			showPage(pages[i]);
+		paginationButtons[i].removeAttribute('href');
+		paginationButtons[i].addEventListener('click', function(){
+			buttonClick(i);
+			showPage(i);
+			scrollToTop();
 		})
 	}
 
-	function showPage(pageIndex){
-		pages.forEach(function(pageIndex){
-			pages.forEach((pageIndex) => pageIndex.classList.remove('section-news__page--active'));
-			pageIndex.classList.add('section-news__page--active');
+	function buttonClick(item){
+		paginationButtons.forEach(function(item, index){
+			item.classList.remove('section-news__pagination-button--active');
 		})
+		paginationButtons[item].classList.add('section-news__pagination-button--active');
 	}
+
+	function showPage(item){
+		pages.forEach(function(item, index){
+			item.classList.remove('section-news__page--active');
+		})
+		pages[item].classList.add('section-news__page--active');
+	}
+
+	function scrollToTop(){
+		window.scrollTo(0,0);
+	}
+
+
 
 
 
