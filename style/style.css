@@ -71,6 +71,7 @@ img {
     background-color: #333333;
     top: 0;
     right: 0;
+    border-radius: 30px;
   }
 }
 /* SITE-MENU */
@@ -346,9 +347,10 @@ img {
     content: "";
     width: 5px;
     height: 100%;
-    background-color: #333333;
     top: 0;
     right: 0;
+    background-color: #333333;
+    border-radius: 30px;
   }
   .site-menu__numbers {
     margin: 0 auto;
@@ -825,6 +827,14 @@ img {
   background-color: #ffffff;
   box-shadow: 0px 0px 15px -10px #000000;
 }
+.site-text-content__title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: center;
+}
 .site-text-content__text {
   margin: 0;
   margin-bottom: 30px;
@@ -834,6 +844,29 @@ img {
 }
 .site-text-content__text:last-child {
   margin-bottom: 0;
+}
+.site-text-content__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-text-content__list-item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.site-text-content__list-item:before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #333333;
+  border-radius: 50%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 @media (min-width: 1200px) {
   .site-text-content {
@@ -1598,6 +1631,43 @@ img {
 .section-our-services__service-title--warehouse:before {
   background-image: url(../img/icons/cards/warehouse-colored.svg);
 }
+.section-our-services__partners-gallery {
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-our-services__gallery-title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  line-height: 35px;
+}
+.section-our-services__partner {
+  margin-bottom: 20px;
+  max-width: 45%;
+  box-shadow: 0px 0px 15px -10px #000000;
+}
+.section-our-services__partner:last-child {
+  margin-bottom: 0;
+}
+.section-our-services__partner:hover {
+  box-shadow: 0px 0px 3px 3px #fcda00;
+}
+.section-our-services__partner-link {
+  display: block;
+  font-size: 0;
+  line-height: 0px;
+}
 @media (min-width: 768px) {
   .section-our-services__service-title {
     margin-right: auto;
@@ -1614,6 +1684,13 @@ img {
     transform: translate(-50%, 0);
     width: 100px;
     height: 100px;
+  }
+  .section-our-services__partner {
+    max-width: 18%;
+  }
+  .section-our-services__gallery-title {
+    font-size: 30px;
+    line-height: 40px;
   }
 }
 /* PAGE-NEWS */

@@ -116,6 +116,7 @@ img {
 			background-color: @color-grey;
 			top: 0;
 			right: 0;
+			border-radius: 30px;
 		}
 	}
 }
@@ -444,9 +445,10 @@ img {
 			content: "";
 			width: 5px;
 			height: 100%;
-			background-color: @color-grey;
 			top: 0;
 			right: 0;
+			background-color: @color-grey;
+			border-radius: 30px;
 		}
 	}
 
@@ -1038,6 +1040,15 @@ img {
 	box-shadow: 0px 0px 15px -10px @color-black;
 }
 
+.site-text-content__title {
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0;
+	font-size: 25px;
+	line-height: 35px;
+	text-align: center;
+}
+
 .site-text-content__text {
 	margin: 0;
 	margin-bottom: 30px;
@@ -1046,6 +1057,31 @@ img {
 	line-height: 25px;
 	&:last-child {
 		margin-bottom: 0;
+	}
+}
+
+.site-text-content__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.site-text-content__list-item {
+	position: relative;
+	margin-bottom: 20px;
+	padding-left: 30px;
+	font-size: 18px;
+	line-height: 20px;
+	&:before {
+		position: absolute;
+		content: "";
+		width: 10px;
+		height: 10px;
+		background-color: @color-grey;
+		border-radius: 50%;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 }
 
@@ -2087,6 +2123,61 @@ img {
 	}
 }
 
+.section-our-services__advantages-list {
+
+}
+
+.section-our-services__advantages-list-item {
+
+}
+
+.section-our-services__partners-gallery {
+	margin: 0;
+	margin-top: 20px;
+	padding: 0;
+	list-style: none;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.section-our-services__gallery-title {
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 25px;
+	line-height: 35px;
+}
+
+.section-our-services__partner {
+	margin-bottom: 20px;
+	max-width: 45%;
+	box-shadow: 0px 0px 15px -10px @color-black;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&:hover {
+		box-shadow: 0px 0px 3px 3px @color-yellow;
+	}
+}
+
+.section-our-services__partner-link {
+	display: block;
+	font-size: 0;
+	line-height: 0px;
+}
+
+.section-our-services_partner-logo {
+
+}
+
+
+
 @media (min-width: @width-tablet) {
 	.section-our-services__service-title {
 		margin-right: auto;
@@ -2104,7 +2195,27 @@ img {
 			height: 100px;
 		}
 	}
+
+	.section-our-services__partner {
+		max-width: 18%;
+	}
+
+	.section-our-services__gallery-title {
+		font-size: 30px;
+		line-height: 40px;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
