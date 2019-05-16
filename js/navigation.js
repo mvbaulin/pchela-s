@@ -2,7 +2,6 @@
 
 	/* NAVIGATION OPEN-CLOSE*/
 
-	let mainNavItem = document.querySelector('.site-menu__list-item')
 	let burger = document.querySelector('.site-menu__burger')
 	let numbersButton = document.querySelector('.site-menu__number-button')
 	let numbersArea = document.querySelector('.site-menu__number-list ')
@@ -33,10 +32,18 @@
 	}
 
 
-	if (mainNavItem.classList.contains('site-menu__list-item--active')) {
-		mainNavItem.children[0].removeAttribute('href');
-		logo.removeAttribute('href');
-	}
+	/* REMOVE HREF */
+
+	let menuLinks = document.querySelectorAll('.site-menu__list-item');
+
+	menuLinks.forEach(function(item){
+		if (item.classList.contains('site-menu__list-item--active')) {
+			item.children[0].removeAttribute('href');
+		}
+	})
+
+
+
 
 
 	/* NAVIGATION-FIX */
