@@ -12,8 +12,8 @@
 	}
 
 	for (let i = 0; i < paginationButtons.length; i++) {
-		paginationButtons[i].removeAttribute('href');
-		paginationButtons[i].addEventListener('click', function(){
+		paginationButtons[i].addEventListener('click', function(event){
+			event.preventDefault();
 			buttonClick(i);
 			showPage(i);
 			scrollToTop();
