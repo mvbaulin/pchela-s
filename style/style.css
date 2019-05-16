@@ -1828,3 +1828,122 @@ img {
     border-radius: 30px;
   }
 }
+/* JOB-OPPORTUNITY PAGE */
+.vacancies-section__title {
+  margin-bottom: 20px;
+}
+.vacancies-section__imergency {
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px -10px #000000;
+  font-size: 14px;
+  line-height: 25px;
+  background: linear-gradient(135deg, #ffffff, #bdc3c7);
+}
+.vacancies-section__imergency-title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+}
+.vacancies-section__imergency-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.vacancies-section__vacancy-name {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+.vacancies-section__imergency-properties {
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+.vacancies-section__imergency-property {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+}
+.vacancies-section__imergency-property-title {
+  margin: 0;
+  padding: 0;
+  padding-right: 10px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.vacancies-section__vacancy-imergency-description {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 18px;
+}
+.vacancies-section__phone {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #fcda00;
+  text-shadow: 1px 1px 1px #000000;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+}
+.vacancies-section__phone:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 5px #fcda00;
+}
+.vacancies-section__phone--important {
+  color: tomato;
+}
+.vacancies-section__vacancies-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.vacancies-section__vacancy {
+  margin-bottom: 20px;
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px -10px #000000;
+}
+.vacancies-section__vacancy:last-child {
+  margin-bottom: 0;
+}
+.vacancies-section__vacancy-name {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+}
+.vacancies-section__vacancy-properties {
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+}
+.vacancies-section__vacancy-property {
+  margin-bottom: 10px;
+}
+.vacancies-section__vacancy-property:last-child {
+  margin-bottom: 0;
+}
+.vacancies-section__vacancy-property-title {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 20px;
+}
+.vacancies-section__vacancy-property-description {
+  margin: 0;
+  padding: 0;
+}
