@@ -78,7 +78,7 @@ img {
 .site-menu {
   opacity: 1;
   background-color: #000000;
-  background-colorz-index: 99;
+  z-index: 99;
 }
 @media (max-width: 1200px) {
   .site-menu--fixed {
@@ -238,7 +238,7 @@ img {
 }
 .site-menu__navigation {
   display: none;
-  z-index: 10;
+  z-index: 200;
 }
 .site-menu__list {
   margin: 0;
