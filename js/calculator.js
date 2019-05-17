@@ -1,6 +1,6 @@
 (function(){
 
-	/* CAR-SWITCH */
+/* CAR-SWITCH */
 
 	let carSliderPages = document.querySelectorAll('.calculator__slider-page');
 	let carSliderPrevBtn = document.querySelector('.calculator__slider-button--prev');
@@ -58,9 +58,6 @@
 
 	carSlidersSwitch(0);
 
-
-
-
 	/* CALCULATOR */
 
 	let calculatorResult = document.querySelector('.calculator__result');
@@ -71,13 +68,11 @@
 	let assemblers = document.querySelector('#calculator__assemblers');
 	let assemblersTime = document.querySelector('#calculator__assemblers-time');
 
-
 	let distancePrice = 33,
 		loadersPricePerHour = 270,
 		assemblersPricePerHour = 450;
 
-
-	totalPrice = 0;
+	let	totalPrice = 0;
 
 	calculatorResult.addEventListener('input', changeTotalPrice);
 	carTime.addEventListener('input', changeTotalPrice);
@@ -86,7 +81,6 @@
 	loadersTime.addEventListener('input', changeTotalPrice);
 	assemblers.addEventListener('input', changeTotalPrice);
 	assemblersTime.addEventListener('input', changeTotalPrice);
-
 
 	function changeTotalPrice(carSum, distance, loadersSum, assemblersSum){
 		carSum = carTime.value * parseInt(window.variables.carPrice.textContent, 10);
@@ -98,9 +92,5 @@
 		calculatorResult.textContent = totalPrice;
 	}
 
-
-
 	changeTotalPrice();
-
-
 })()

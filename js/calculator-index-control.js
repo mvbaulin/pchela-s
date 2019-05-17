@@ -1,6 +1,7 @@
-/* CALCULATOR-BUTTONS*/
-
 (function(){
+
+	/* CALCULATOR-BUTTONS*/
+
 	let calculatorArea = document.querySelector('.section-calculator');
 	let calculatorButton = document.querySelectorAll('.calculator__checkbox');
 	let calculatorHiddenAreas = document.querySelectorAll('.calculator__list--hidden');
@@ -28,6 +29,5 @@
 		} else {
 			calculatorResultBox.classList.remove('calculator__result-wrapper--showed');
 		}
-		// console.log(calculatorArea.getBoundingClientRect().top);
 	})
 })()

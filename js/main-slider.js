@@ -68,6 +68,5 @@
 		clearTimeout(interval);
 	}
 
-
 	noScriptMainSlider();
 })()

@@ -9,7 +9,6 @@
 	let logo = document.querySelector('.logo')
 	let main = document.querySelector('main')
 
-
 	function noScriptSiteMenu(){
 		if (window.variables.mainNav.classList.contains('site-menu__navigation--nojs')) {
 			window.variables.mainNav.classList.remove('site-menu__navigation--nojs');
@@ -25,12 +24,10 @@
 		numbersArea.classList.toggle('site-menu__number-list--active');
 	}
 
-
 	burger.addEventListener('click', openCloseMenu);
 	function openCloseMenu(){
 		window.variables.mainNav.classList.toggle('site-menu__navigation--opened');
 	}
-
 
 	/* REMOVE HREF */
 
@@ -41,10 +38,6 @@
 			item.children[0].removeAttribute('href');
 		}
 	})
-
-
-
-
 
 	/* NAVIGATION-FIX */
 
@@ -63,7 +56,6 @@
 			main.style.marginTop = 0;
 		}
 	}
-
 
 	/* SCROLL TO CONTACTS */
 
@@ -100,7 +92,6 @@
 			clearTimeout(timer);
 		}
 	}
-
-
+	
 	noScriptSiteMenu();
 })()

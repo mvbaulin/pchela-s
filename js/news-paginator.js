@@ -6,7 +6,6 @@
 	let paginationButtons = document.querySelectorAll('.section-news__pagination-button');
 	let news = document.querySelectorAll('.section-news__new');
 
-
 	for (let i = 0; i < news.length; i++) {
 		news[i].children[0].removeAttribute('href');
 	}
@@ -37,11 +36,4 @@
 	function scrollToTop(){
 		window.scrollTo(0,0);
 	}
-
-
-
-
-
-
-
 })();
