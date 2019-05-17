@@ -832,7 +832,7 @@ img {
   margin-bottom: 20px;
   padding: 0;
   font-size: 25px;
-  line-height: 35px;
+  line-height: 30px;
   text-align: center;
 }
 .site-text-content__text {
@@ -1946,4 +1946,23 @@ img {
 .vacancies-section__vacancy-property-description {
   margin: 0;
   padding: 0;
+}
+.site-section-howtojob__title {
+  margin-bottom: 20px;
+}
+.site-section-howtojob__phone-box {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.site-section-howtojob__phone-name {
+  display: block;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: bold;
+  color: #333333;
 }
