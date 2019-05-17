@@ -1904,6 +1904,95 @@ img {
     border-radius: 30px;
   }
 }
+/* PAGE PARTNERS */
+.section-for-partners__title {
+  margin-bottom: 20px;
+}
+.section-for-partners__contact-with-us {
+  margin-top: 20px;
+}
+.section-for-partners__contact-description {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+.section-for-partners__phone-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.section-for-partners__phone-list-item {
+  margin-bottom: 20px;
+}
+.section-for-partners__phone {
+  position: relative;
+  padding-left: 35px;
+  display: block;
+  font-size: 25px;
+  line-height: 35px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  color: tomato;
+  text-shadow: 1px 1px 1px #333333;
+}
+.section-for-partners__phone:last-child {
+  margin-bottom: 0;
+}
+.section-for-partners__phone:before {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 35px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.section-for-partners__phone--phone:before {
+  background-image: url(../img/icons/phone--green.svg);
+}
+.section-for-partners__phone--whatsapp:before {
+  background-image: url(../img/icons/whatsapp.svg);
+}
+.section-for-partners__phone--viber:before {
+  background-image: url(../img/icons/viber.svg);
+}
+.section-for-partners__phone:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 5px #fcda00;
+}
+@media (min-width: 768px) {
+  .section-for-partners__contact-description {
+    margin-bottom: 15px;
+  }
+  .section-for-partners__phone-list {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+  .section-for-partners__phone-list-item {
+    margin-bottom: 0;
+  }
+  .section-for-partners__phone {
+    text-align: left;
+    font-size: 20px;
+    line-height: 25px;
+    padding-left: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-for-partners__phone-list {
+    margin: 0 auto;
+    width: 65%;
+  }
+}
 /* JOB-OPPORTUNITY PAGE */
 .vacancies-section__title {
   margin-bottom: 20px;

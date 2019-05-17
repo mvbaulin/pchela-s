@@ -2157,13 +2157,6 @@ img {
 
 
 
-
-
-
-
-
-
-
 /*  SERVICES PAGE*/
 
 .section-our-services__title {
@@ -2273,8 +2266,6 @@ img {
 
 }
 
-
-
 @media (min-width: @width-tablet) {
 	.section-our-services__service-title {
 		margin-right: auto;
@@ -2302,7 +2293,6 @@ img {
 		line-height: 40px;
 	}
 }
-
 
 
 
@@ -2473,6 +2463,113 @@ img {
 	}
 }
 
+
+/* PAGE PARTNERS */
+
+.section-for-partners__title {
+	margin-bottom: 20px;
+}
+
+.section-for-partners__contact-with-us {
+	margin-top: 20px;
+}
+
+.section-for-partners__contact-description {
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0;
+	font-size: 20px;
+	line-height: 25px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.section-for-partners__phone-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.section-for-partners__phone-list-item {
+	margin-bottom: 20px;
+}
+
+.section-for-partners__phone {
+	position: relative;
+	padding-left: 35px;
+	display: block;
+	font-size: 25px;
+	line-height: 35px;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: center;
+	color: tomato;
+	text-shadow: 1px 1px 1px @color-grey;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&:before {
+		position: absolute;
+		content: "";
+		width: 35px;
+		height: 35px;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	&--phone {
+		&:before {
+			background-image: url(../img/icons/phone--green.svg);
+		}
+	}
+	&--whatsapp {
+		&:before {
+			background-image: url(../img/icons/whatsapp.svg);
+		}
+	}
+	&--viber {
+		&:before {
+			background-image: url(../img/icons/viber.svg);
+		}
+	}
+	&:focus {
+		outline: none;
+		box-shadow: 0px 0px 0px 5px @color-yellow;
+	}
+}
+
+@media (min-width: @width-tablet) {
+	.section-for-partners__contact-description {
+		margin-bottom: 15px;
+	}
+
+	.section-for-partners__phone-list {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.section-for-partners__phone-list-item {
+		margin-bottom: 0;
+	}
+
+	.section-for-partners__phone {
+		text-align: left;
+		font-size: 20px;
+		line-height: 25px;
+		padding-left: 40px;
+	}
+}
+
+@media (min-width: @width-desktop) {
+	.section-for-partners__phone-list {
+		margin: 0 auto;
+		width: 65%;
+	}
+}
 
 
 
