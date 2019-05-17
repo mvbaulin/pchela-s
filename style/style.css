@@ -577,6 +577,15 @@ img {
   transform: translate(-50%, -50%);
 }
 @media (min-width: 768px) {
+  .main-slider__slider-page:nth-child(1) {
+    background-image: url(../img/main-slider/slider-1-desktop.jpg);
+  }
+  .main-slider__slider-page:nth-child(2) {
+    background-image: url(../img/main-slider/slider-2-desktop.jpg);
+  }
+  .main-slider__slider-page:nth-child(3) {
+    background-image: url(../img/main-slider/slider-3-desktop.jpg);
+  }
   .main-slider__btn:after {
     width: 80px;
     height: 80px;
