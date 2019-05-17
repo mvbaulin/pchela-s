@@ -2071,6 +2071,99 @@ img {
 
 
 
+/* PRICE-LIST */
+
+.price-list {
+	padding: 20px 10px;
+	box-shadow: 0px 0px 15px -10px @color-black;
+	border-radius: 10px;
+}
+
+.price-list__table {
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+.price-list__table-header {
+	font-weight: bold;
+	padding-bottom: 10px;
+	font-size: 25px;
+	line-height: 35px;
+}
+
+.price-list__item-name {
+	font-size: 14px;
+	line-height: 18px;
+	th {
+		padding: 10px;
+		background-color: rgba(252, 218, 0, 0.5);
+	}
+	th:first-child {
+		border-radius: 30px 0px 0px 30px;
+	}
+	th:last-child {
+		border-radius: 0px 30px 30px 0px;
+	}
+}
+
+.price-list__table-row {
+	font-size: 12px;
+	td {
+		padding: 10px;
+	}
+	td:first-child {
+		border-radius: 20px 0px 0px 20px;
+	}
+	td:last-child {
+		border-radius: 0px 20px 20px 0px;
+	}
+	&:nth-child(odd) {
+		background-color: rgba(51, 51, 51, 0.1);
+	}
+}
+
+@media (min-width: @width-tablet) {
+	.price-list__table {
+		margin: 0 auto;
+		width: 70%;
+		th,
+		td {
+			padding: 10px;
+		}
+	}
+
+	.price-list__item-name {
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	.price-list__table-row {
+		font-size: 18px;
+		line-height: 23px;
+	}
+}
+
+@media (min-width: @width-desktop) {
+	.price-list {
+		border-radius: 20px;
+		box-shadow: 0px 0px 15px -14px @color-black;
+	}
+
+	.price-list__table {
+		width: 50%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
 /*  SERVICES PAGE*/
 
 .section-our-services__title {
@@ -2129,6 +2222,10 @@ img {
 
 .section-our-services__advantages-list-item {
 
+}
+
+.section-our-services__price-list {
+	margin-top: 20px;
 }
 
 .section-our-services__partners-gallery {

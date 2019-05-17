@@ -1593,6 +1593,79 @@ img {
     max-width: 18%;
   }
 }
+/* PRICE-LIST */
+.price-list {
+  padding: 20px 10px;
+  box-shadow: 0px 0px 15px -10px #000000;
+  border-radius: 10px;
+}
+.price-list__table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+.price-list__table-header {
+  font-weight: bold;
+  padding-bottom: 10px;
+  font-size: 25px;
+  line-height: 35px;
+}
+.price-list__item-name {
+  font-size: 14px;
+  line-height: 18px;
+}
+.price-list__item-name th {
+  padding: 10px;
+  background-color: rgba(252, 218, 0, 0.5);
+}
+.price-list__item-name th:first-child {
+  border-radius: 30px 0px 0px 30px;
+}
+.price-list__item-name th:last-child {
+  border-radius: 0px 30px 30px 0px;
+}
+.price-list__table-row {
+  font-size: 12px;
+}
+.price-list__table-row td {
+  padding: 10px;
+}
+.price-list__table-row td:first-child {
+  border-radius: 20px 0px 0px 20px;
+}
+.price-list__table-row td:last-child {
+  border-radius: 0px 20px 20px 0px;
+}
+.price-list__table-row:nth-child(odd) {
+  background-color: rgba(51, 51, 51, 0.1);
+}
+@media (min-width: 768px) {
+  .price-list__table {
+    margin: 0 auto;
+    width: 70%;
+  }
+  .price-list__table th,
+  .price-list__table td {
+    padding: 10px;
+  }
+  .price-list__item-name {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .price-list__table-row {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+@media (min-width: 1200px) {
+  .price-list {
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px -14px #000000;
+  }
+  .price-list__table {
+    width: 50%;
+  }
+}
 /*  SERVICES PAGE*/
 .section-our-services__title {
   margin-bottom: 20px;
@@ -1630,6 +1703,9 @@ img {
 }
 .section-our-services__service-title--warehouse:before {
   background-image: url(../img/icons/cards/warehouse-colored.svg);
+}
+.section-our-services__price-list {
+  margin-top: 20px;
 }
 .section-our-services__partners-gallery {
   margin: 0;
