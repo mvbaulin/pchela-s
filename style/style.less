@@ -55,7 +55,8 @@ img {
   margin: -1px;
   padding: 0;
   border: none;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   overflow: hidden;
 }
 
@@ -102,8 +103,8 @@ img {
 
 .site-menu {
 	opacity: 1;
-	// transition: 1s;
-	background-color: @color-black;
+	// transition: 1s;transitiontransition
+	background-color: @color-black;background-color
 	z-index: 99;
 }
 
@@ -148,7 +149,8 @@ img {
 		height: 30px;
 		top: 50%;
 		left: 12%;
-		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		        transform: translateY(-50%);
 		background-image: url(../img/icons/phone.svg);
 		background-repeat: no-repeat;
 	}
@@ -241,7 +243,6 @@ img {
 
 .site-menu__burger-menu {
 	position: relative;
-	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	justify-content: space-between;
@@ -268,7 +269,8 @@ img {
 		top: 50%;
 		left: 0;
 		background-color: @color-white;
-		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		        transform: translateY(-50%);
 		box-shadow: 0px 10px 0px 0px @color-white,
 		0px -10px 0px 0px @color-white;
 	}
@@ -361,7 +363,6 @@ img {
 	}
 
 	.site-menu__number-list-item {
-		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		justify-content: space-between;
@@ -418,7 +419,6 @@ img {
 	}
 
 	.site-menu__number-list {
-		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		flex-direction: row;
@@ -446,7 +446,6 @@ img {
 	}
 
 	.site-menu__list {
-		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		justify-content: space-between;
@@ -513,7 +512,6 @@ img {
 
 .main-slider {
 	position: relative;
-	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	overflow: hidden;
@@ -521,11 +519,11 @@ img {
 }
 
 .main-slider__pages {
-	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	justify-content: space-between;
-	transform: translateX(0%);
+	-webkit-transform: translateX(0%);
+	        transform: translateX(0%);
 	transition: 0.5s;
 }
 
@@ -577,7 +575,8 @@ img {
 		height: 40px;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 		background-image: url(../img/icons/slider-arrow.svg);
 		background-position: center;
 		transition: 0.5s;
@@ -600,7 +599,8 @@ img {
 .main-slider__btn--prev {
 	left: 0;
 	&:after {
-		transform: translate(-50%, -50%) rotate(180deg);
+		-webkit-transform: translate(-50%, -50%) rotate(180deg);
+		        transform: translate(-50%, -50%) rotate(180deg);
 	}
 }
 
@@ -626,14 +626,14 @@ img {
 
 .main-slider__dots {
 	position: absolute;
-	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	justify-content: space-between;
 	width: 80px;
 	left: 50%;
 	bottom: 20px;
-	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
 	line-height: 0;
 	font-size: 0;
 }
@@ -665,7 +665,8 @@ img {
 		left: 50%;
 		background-color: @color-yellow;
 		border-radius: 50%;
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 }
 
@@ -726,7 +727,6 @@ img {
 .section-services__list {
 	margin: 0;
 	padding: 0;
-	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	flex-direction: column;
@@ -742,7 +742,6 @@ img {
 
 @media (min-width: @width-tablet) {
 	.section-services__list {
-		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		flex-direction: row;
@@ -751,7 +750,6 @@ img {
 	}
 
 	.section-services__list-item {
-		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		margin-bottom: 0;
@@ -796,7 +794,8 @@ img {
 		content: "";
 		bottom: 0px;
 		left: 50%;
-		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		        transform: translateX(-50%);
 		width: 100px;
 		height: 100px;
 		background-repeat: no-repeat;
@@ -888,7 +887,6 @@ img {
 
 @media (min-width: @width-tablet) {
 	.service-card {
-		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		flex-direction: column;
@@ -1029,7 +1027,8 @@ img {
 		height: 10px;
 		top: 50%;
 		left: 0;
-		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		        transform: translateY(-50%);
 		background-color: @color-grey;
 		border-radius: 50%;
 	}
@@ -1069,7 +1068,8 @@ img {
 	border: 2px solid @color-yellow;
 	border-radius: 50px;
 	-webkit-appearance: none;
-	appearance: none;
+	-moz-appearance: none;
+	     appearance: none;
 	cursor: pointer;
 	transition: 0.5s;
 	&--white {
@@ -1204,7 +1204,6 @@ img {
 
 .calculator__car-navigation {
 	position: absolute;
-	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	width: 100%;
@@ -1235,7 +1234,8 @@ img {
 
 .calculator__slider-button--prev {
 	border-radius: 0px 10px 0px 00px;
-	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	        transform: rotate(180deg);
 }
 
 .calculator__slider-button--next {
@@ -1298,7 +1298,10 @@ img {
 	font-size: 25px;
 	line-height: 40px;
 	font-weight: bold;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 }
 
 .calculator__button-close {
@@ -1318,7 +1321,8 @@ img {
 		top: 50%;
 		left: 50%;
 		background-color: @color-white;
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 	&:before {
 		width: 5px;
@@ -1334,7 +1338,8 @@ img {
 	background-color: @color-red;
 	&:before,
 	&:after {
-		transform: translate(-50%, -50%) rotate(135deg);
+		-webkit-transform: translate(-50%, -50%) rotate(135deg);
+		        transform: translate(-50%, -50%) rotate(135deg);
 	}
 	&:before {
 		height: 27px;
@@ -1356,7 +1361,6 @@ img {
 
 @media (min-width: @width-tablet) {
 	.calculator__wrapper {
-		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		flex-direction: row;
@@ -1380,7 +1384,6 @@ img {
 		order: 2;
 		align-self: flex-start;
 		.calculator__list {
-			display: -webkit-flex;
 			display: -ms-flex;
 			display: flex;
 			justify-content: space-between;
@@ -1414,7 +1417,6 @@ img {
 	}
 
 	.calculator__car-property-table tbody {
-		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		justify-content: space-around;
@@ -1613,7 +1615,6 @@ img {
 
 @media (min-width: @width-tablet) {
 	.echo-form__list {
-		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		justify-content: space-between;
@@ -1728,7 +1729,6 @@ img {
 }
 
 .main-footer__social-list {
-	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	justify-content: center;
@@ -1864,7 +1864,6 @@ img {
 
 @media (min-width: @width-tablet) {
 	.gallery-section__gallery {
-		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		flex-wrap: wrap;
@@ -1998,7 +1997,8 @@ img {
 		height: 40px;
 		top: 50%;
 		left: 0;
-		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		        transform: translateY(-50%);
 		background-repeat: no-repeat;
 		background-size: 100%;
 	}
@@ -2024,7 +2024,6 @@ img {
 }
 
 .section-our-services__partners-gallery {
-	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	justify-content: space-between;
@@ -2078,7 +2077,8 @@ img {
 			top: auto;
 			bottom: 0;
 			left: 50%;
-			transform: translate(-50%, 0);
+			-webkit-transform: translate(-50%, 0);
+			        transform: translate(-50%, 0);
 		}
 	}
 
@@ -2151,7 +2151,6 @@ img {
 }
 
 .section-news__new-time {
-	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	justify-content: flex-end;
@@ -2174,7 +2173,6 @@ img {
 }
 
 .section-news__pagination {
-	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	justify-content: center;
@@ -2298,7 +2296,8 @@ img {
 		height: 35px;
 		top: 50%;
 		left: 0;
-		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		        transform: translateY(-50%);
 		background-repeat: no-repeat;
 		background-position: center;
 	}
@@ -2329,7 +2328,6 @@ img {
 	}
 
 	.section-for-partners__phone-list {
-		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
 		justify-content: space-between;
@@ -2400,7 +2398,6 @@ img {
 }
 
 .vacancies-section__imergency-property {
-	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	justify-content: center;
@@ -2496,7 +2493,6 @@ img {
 }
 
 .site-section-howtojob__phone-box {
-	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	flex-direction: column;
