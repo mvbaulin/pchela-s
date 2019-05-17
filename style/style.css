@@ -793,7 +793,7 @@ img {
   .service-card:hover .service-card__arrow:after {
     width: 45px;
     height: 45px;
-    top: 7px;
+    top: 8px;
     left: 8px;
   }
   .service-card__title:after {
