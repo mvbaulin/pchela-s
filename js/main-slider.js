@@ -1,7 +1,6 @@
 /* MAIN-SLIDER */
 
 (function(){
-	// let mainSlider = document.querySelector('.main-slider'); В ГЛОБАЛЕ
 	let mainSliderPages = document.querySelectorAll('.main-slider__slider-page');
 	let mainSliderWrapper = document.querySelector('.main-slider__pages');
 	let mainSliderPrevBtn = document.querySelector('.main-slider__btn--prev');
@@ -38,16 +37,19 @@
 
 	mainSliderPrevBtn.addEventListener('click', function(){
 		mainSliderScroll(100, -1);
+		stopInterval();
 	});
 
 	mainSliderNextBtn.addEventListener('click', function(){
 		mainSliderScroll(-100, 1);
+		stopInterval();
 	});
 
 	for (let i = 0; i < mainSliderDots.length; i++) {
 		mainSliderDots[i].addEventListener('click', function(){
 			currentDot = i;
 			mainSliderPosition = -i * 100;
+			stopInterval();
 
 			mainSliderDots.forEach(function(item, index){
 				item.classList.remove('main-slider__dot--active');
@@ -57,6 +59,15 @@
 			mainSliderWrapper.style.transform = "translateX("+ mainSliderPosition + "vw)";
 		})
 	}
+
+	let interval = setInterval(function(){
+		mainSliderScroll(-100, 1);
+	}, 3000)
+
+	function stopInterval(){
+		clearTimeout(interval);
+	}
+
 
 	noScriptMainSlider();
 })()

@@ -1765,13 +1765,17 @@ img {
 .section-our-services__partner:last-child {
   margin-bottom: 0;
 }
-.section-our-services__partner:hover {
-  box-shadow: 0px 0px 3px 3px #fcda00;
-}
 .section-our-services__partner-link {
   display: block;
   font-size: 0;
   line-height: 0px;
+}
+.section-our-services__partner-link:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 5px #fcda00;
+}
+.section-our-services__partner-link:hover {
+  box-shadow: 0px 0px 5px 1px #fcda00;
 }
 @media (min-width: 768px) {
   .section-our-services__service-title {
