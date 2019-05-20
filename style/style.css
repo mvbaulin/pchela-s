@@ -1486,6 +1486,7 @@ img {
   outline: none;
 }
 .main-footer__about-wrapper {
+  position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #000000;
@@ -1521,6 +1522,20 @@ img {
 }
 .main-footer__copyright {
   display: block;
+  margin-bottom: 10px;
+}
+.main-footer__developed-by {
+  color: #333333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.main-footer__developed-by:hover {
+  color: #fcda00;
+}
+.main-footer__developed-by:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 3px #fcda00;
 }
 @media (min-width: 768px) {
   .main-footer__phone {
@@ -1535,6 +1550,15 @@ img {
     width: 50%;
     margin-right: auto;
     margin-left: auto;
+  }
+  .main-footer__copyright {
+    margin-bottom: 0;
+  }
+  .main-footer__developed-by {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    text-align: right;
   }
 }
 /* SOCIAL-LINK */
@@ -1750,6 +1774,7 @@ img {
 }
 .section-our-services__gallery-title {
   margin: 0;
+  margin-top: 20px;
   margin-bottom: 20px;
   padding: 0;
   width: 100%;

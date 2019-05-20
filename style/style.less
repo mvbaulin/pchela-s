@@ -1737,6 +1737,7 @@ img {
 }
 
 .main-footer__about-wrapper {
+	position: relative;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background-color: @color-black;
@@ -1776,6 +1777,21 @@ img {
 
 .main-footer__copyright {
 	display: block;
+	margin-bottom: 10px;
+}
+
+.main-footer__developed-by {
+	color: @color-grey;
+	text-decoration: none;
+	font-weight: bold;
+	transition: 0.3s;
+	&:hover {
+		color: @color-yellow;
+	}
+	&:focus {
+		outline: none;
+		box-shadow: 0px 0px 0px 3px @color-yellow;
+	}
 }
 
 @media (min-width: @width-tablet) {
@@ -1793,6 +1809,17 @@ img {
 		width: 50%;
 		margin-right: auto;
 		margin-left: auto;
+	}
+
+	.main-footer__copyright  {
+		margin-bottom: 0;
+	}
+
+	.main-footer__developed-by {
+		position: absolute;
+		right: 0;
+		bottom: 20px;
+		text-align: right;
 	}
 }
 
@@ -2052,6 +2079,7 @@ img {
 
 .section-our-services__gallery-title {
 	margin: 0;
+	margin-top: 20px;
 	margin-bottom: 20px;
 	padding: 0;
 	width: 100%;
