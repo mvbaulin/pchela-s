@@ -1046,7 +1046,7 @@ img {
 .calculator__slider-button {
   width: 50%;
   padding: 0;
-  height: 30px;
+  height: 50px;
   border: none;
   background-color: rgba(0, 0, 0, 0.1);
   background-image: url(../img/icons/car-switch-arrow.svg);
