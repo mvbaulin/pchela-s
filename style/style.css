@@ -1947,7 +1947,7 @@ img {
     position: absolute;
     top: 0;
     right: 0;
-    width: 300px;
+    max-width: 275px;
   }
   .section-news__new-time {
     position: absolute;
