@@ -2555,3 +2555,17 @@ img {
 	font-weight: bold;
 	color: @color-grey;
 }
+
+@media (min-width: @width-tablet) {
+	.vacancies-section__vacancy-name {
+		padding-left: 10px;
+		text-align: left;
+	}
+
+	.vacancies-section__imergency {
+		.vacancies-section__vacancy-name {
+			padding-left: 0;
+			text-align: center;
+		}
+	}
+}
