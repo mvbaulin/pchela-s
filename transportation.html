@@ -19,7 +19,7 @@
 			<div class="container container--full">
 				<div class="site-menu__wrapper">
 					<div class="site-menu__burger-menu">
-						<a class="logo site-menu__logo" href="index.html">
+						<a class="logo site-menu__logo">
 							<img class="logo__image" src="img/logo.svg" alt="Пчела-Сервис" width="140">
 						</a>
 						<p class="site-menu__description">
@@ -68,7 +68,7 @@
 									О компании
 								</a>
 							</li>
-							<li class="site-menu__list-item site-menu__list-item--dropdown">
+							<li class="site-menu__list-item site-menu__list-item--dropdown site-menu__list-item--active">
 								<button class="site-menu__link" type="button">
 									Услуги
 								</button>
@@ -78,8 +78,8 @@
 											Переезды
 										</a>
 									</li>
-									<li class="site-menu__dropdown-list-item">
-										<a class="site-menu__link" href="transportation.html">
+									<li class="site-menu__dropdown-list-item site-menu__dropdown-list-item--active">
+										<a class="site-menu__link">
 											Транспортировка
 										</a>
 									</li>
@@ -90,7 +90,7 @@
 									</li>
 								</ul>
 							</li>
-							<li class="site-menu__list-item site-menu__list-item--active">
+							<li class="site-menu__list-item">
 								<a class="site-menu__link" href="news.html">
 									Новости
 								</a>
@@ -118,43 +118,47 @@
 	</div>
 </header>
 <main>
-	<section class="site-section section-news">
-		<div class="container">
-			<div class="section-news__wrapper">
-				<h1 class="section-title section-news__title">
-					Новости
-				</h1>
-				<div class="section-news__pages">
-					<div class="section-news__page section-news__page--active">
-						<ul class="section-news__news-list">
-							<li class="section-news__new">
-								<a class="section-news__link-to-page" href="#">
-									<div class="section-news__new-content">
-										<h2 class="section-news__new-title">
-											Новый дизайн
-										</h2>
-										<p class="section-news__new-description">
-											Мы не стоим на месте, наша компания постоянно развивается. Мы обновили наш сайт, для большего комфорта нащих клиентов.
-										</p>
-									</div>
-									<div class="section-news__image-wrapper">
-										<img class="section-news__new-image" src="img\news\new-design\new-design.jpg" alt="Новый дизайн">
-									</div>
-									<div class="section-news__new-time">
-										<span class="section-news__publicated">Опубликовано: </span>
-										<time class="section-news__new-date" datetime="2019-05-28">28.05.2019</time>
-									</div>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="section-news__pagination">
-					<a class="section-news__pagination-button section-news__pagination-button--active" href="#">1</a>
-				</div>
-			</div>
+	<div class="container">
+		<h2 class="section-our-services__service-title section-our-services__service-title--transportation">Транспортировка</h2>
+		<div class="site-text-content">
+			<p class="site-text-content__text">
+				В своей повседневной работе мы стремимся не просто оказать транспортные услуги, а решить транспортные проблемы наших клиентов в комплексе. Комплексность подхода характеризуется полным организационно-техническим сопровождением перевозок, выполнением погрузо-разгрузочных работ, экспедированием и страхованием грузов.
+			</p>
+			<p class="site-text-content__text">
+				Сегодня преимуществом работы с нашей компанией является комплексный сервис, предлагаемый клиентам по конкурентоспособной цене и выполняемый на высоком профессиональном уровне, как со стороны собственных сотрудников, так и со стороны привлекаемых компаний-партнёров. Порядок ценообразования полностью доступен потребителю, делая стоимость перевозки груза ещё более привлекательной.
+			</p>
+			<p class="site-text-content__text">
+				Требуются грузчики в Москве или Московской области с почасовой оплатой? Необходим ответственный персонал для выполнения дачного, квартирного, офисного или иного переезда? Компания «Пчела Сервис» - всегда к Вашим услугам! Вам достаточно связаться с нашим оператором любым удобным для Вас способом (по телефону, электронной почте) и сказать ключевую фразу: «Нужны грузчики». Решение всех остальных вопросов по организации погрузочно-разгрузочных и смежных работ мы возьмем на себя.
+			</p>
+			<p class="site-text-content__text">
+				Погрузкой и разгрузкой мы занимаемся не только на переездах, но и на территориях заказчиков: погрузка и разгрузка фур, на скаладах перенос товара в труднодоступных участках, а так же, приемущественно, перенос грузов и мебели по зданию.
+			</p>
 		</div>
-	</section>
+		<div class="price-list section-our-services__price-list">
+			<table class="price-list__table">
+				<caption class="price-list__table-header">
+					Прайс-лист<br>
+					"Транспортировка"
+				</caption>
+				<tr class="price-list__item-name">
+					<th>Услуга</th>
+					<th>Цена</th>
+				</tr>
+				<tr class="price-list__table-row">
+					<td>Грузчики</td>
+					<td>от 270 руб/час</td>
+				</tr>
+				<tr class="price-list__table-row">
+					<td>Транспорт</td>
+					<td>от 850 руб/час</td>
+				</tr>
+				<tr class="price-list__table-row">
+					<td>Сборка мебели</td>
+					<td>от 410 руб/час</td>
+				</tr>
+			</table>
+		</div>
+	</div>
 </main>
 <footer class="main-footer">
 	<div class="container">
@@ -218,6 +222,5 @@
 <script src="js/picturefill.min.js"></script>
 <script src="js/variables.js"></script>
 <script src="js/navigation.js"></script>
-<script src="js/news-paginator.js"></script>
 </body>
 </html>

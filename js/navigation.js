@@ -2,12 +2,14 @@
 
 	/* NAVIGATION OPEN-CLOSE*/
 
-	let burger = document.querySelector('.site-menu__burger')
-	let numbersButton = document.querySelector('.site-menu__number-button')
-	let numbersArea = document.querySelector('.site-menu__number-list ')
+	let burger = document.querySelector('.site-menu__burger');
+	let numbersButton = document.querySelector('.site-menu__number-button');
+	let numbersArea = document.querySelector('.site-menu__number-list ');
+	let dropdownBtn = document.querySelector('.site-menu__list-item--dropdown > button');
+	let dropdownMenu = document.querySelector('.site-menu__dropdown-list');
 
-	let logo = document.querySelector('.logo')
-	let main = document.querySelector('main')
+	let logo = document.querySelector('.logo');
+	let main = document.querySelector('main');
 
 	function noScriptSiteMenu(){
 		if (window.variables.mainNav.classList.contains('site-menu__navigation--nojs')) {
@@ -28,6 +30,10 @@
 	function openCloseMenu(){
 		window.variables.mainNav.classList.toggle('site-menu__navigation--opened');
 	}
+
+	dropdownBtn.addEventListener('click', function() {
+		dropdownMenu.classList.toggle('site-menu__dropdown-list--active');
+	})
 
 	/* REMOVE HREF */
 
@@ -92,6 +98,6 @@
 			clearTimeout(timer);
 		}
 	}
-	
+
 	noScriptSiteMenu();
 })()
