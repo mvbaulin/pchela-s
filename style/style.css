@@ -933,6 +933,11 @@ img {
 .site-text-content__text:last-child {
   margin-bottom: 0;
 }
+.site-text-content__text b {
+  font-weight: inherit;
+  font-style: italic;
+  color: #333333;
+}
 .site-text-content__list {
   margin: 0;
   padding: 0;
@@ -965,6 +970,10 @@ img {
   }
 }
 /* SECTION-ABOUT-US */
+.section-about-us {
+  padding-bottom: 25px;
+  background-color: #F5F5F5;
+}
 .section-about-us__section-title {
   margin-bottom: 20px;
 }
@@ -1016,6 +1025,9 @@ img {
 }
 /*  SECTION-CALCULATOR*/
 .section-calculator {
+  margin-top: 20px;
+  padding-bottom: 25px;
+  background-color: #F5F5F5;
   overflow: hidden;
 }
 .section-calculator__wrapper {
