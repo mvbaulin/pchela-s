@@ -2383,5 +2383,6 @@ img {
   .site-section-howtojob__phone-box {
     align-self: flex-end;
     margin: 0 auto;
+    margin-top: 20px;
   }
 }
