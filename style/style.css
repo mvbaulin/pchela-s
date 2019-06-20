@@ -2359,3 +2359,29 @@ img {
     text-align: center;
   }
 }
+@media (min-width: 1200px) {
+  .vacancies-section__vacancies-list {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .vacancies-section__vacancy {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+  }
+  .vacancies-section__vacancy:last-child {
+    margin-bottom: 20px;
+  }
+  .vacancies-section__vacancy-name {
+    margin: 0 auto;
+  }
+  .site-section-howtojob__phone-box {
+    align-self: flex-end;
+    margin: 0 auto;
+  }
+}

@@ -2772,3 +2772,33 @@ img {
 		}
 	}
 }
+
+@media (min-width: @width-desktop) {
+	.vacancies-section__vacancies-list {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.vacancies-section__vacancy {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-wrap: wrap;
+		width: 30%;
+		&:last-child {
+			margin-bottom: 20px;
+		}
+	}
+
+	.vacancies-section__vacancy-name {
+		margin: 0 auto;
+	}
+
+	.site-section-howtojob__phone-box  {
+		align-self: flex-end;
+		margin: 0 auto;
+	}
+}
