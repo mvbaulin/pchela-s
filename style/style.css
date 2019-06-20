@@ -938,6 +938,11 @@ img {
   font-style: italic;
   color: #333333;
 }
+.site-text-content__text a {
+  color: #333333;
+  font-weight: bold;
+  font-style: italic;
+}
 .site-text-content__list {
   margin: 0;
   padding: 0;
@@ -1830,6 +1835,26 @@ img {
 .section-our-services__service-title--warehouse:before {
   background-image: url(../img/icons/cards/warehouse-colored.svg);
 }
+.section-our-services__service-title--nopicture:before {
+  display: none;
+}
+.section-our-services__order {
+  margin-top: 15px;
+}
+.section-our-services__call-button {
+  display: block;
+  margin: 0 auto;
+  font-size: 28px;
+  line-height: 35px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fcda00;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000000;
+}
+.section-our-services__call-button:focus {
+  outline: 5px solid #fcda00;
+}
 .section-our-services__price-list {
   margin-top: 20px;
 }
@@ -1892,12 +1917,78 @@ img {
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
   }
+  .section-our-services__service-title--nopicture {
+    padding-bottom: 0;
+  }
   .section-our-services__partner {
     max-width: 18%;
   }
   .section-our-services__gallery-title {
     font-size: 30px;
     line-height: 40px;
+  }
+}
+/* SECTION-ALL-SERVICES */
+.section-all-services__title {
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+/* SERVICES-NAVIGATION*/
+.services-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.services-navigation__item {
+  position: relative;
+  margin-bottom: 5px;
+  padding-left: 15px;
+}
+.services-navigation__item:before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  top: 50%;
+  left: 0;
+  background-color: #fcda00;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+.services-navigation__item--active {
+  font-weight: bold;
+}
+.services-navigation__item--active:before {
+  display: none;
+}
+.services-navigation__item--active .services-navigation__link {
+  color: #fcda00;
+}
+.services-navigation__link {
+  text-decoration: none;
+  color: #333333;
+}
+.services-navigation__link:focus {
+  outline: 5px solid #fcda00;
+}
+.services-navigation__link:hover {
+  color: #fcda00;
+}
+@media (min-width: 768px) {
+  .services-navigation {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .services-navigation__item {
+    width: 40%;
   }
 }
 /* PAGE-NEWS */

@@ -1098,6 +1098,11 @@ img {
 		font-style: italic;
 		color: @color-grey;
 	}
+	a {
+		color: @color-grey;
+		font-weight: bold;
+		font-style: italic;
+	}
 }
 
 .site-text-content__list {
@@ -2143,6 +2148,30 @@ img {
 			background-image: url(../img/icons/cards/warehouse-colored.svg);
 		}
 	}
+	&--nopicture {
+		&:before {
+			display: none;
+		}
+	}
+}
+
+.section-our-services__order {
+	margin-top: 15px;
+}
+
+.section-our-services__call-button {
+	display: block;
+	margin: 0 auto;
+	font-size: 28px;
+	line-height: 35px;
+	font-weight: bold;
+	text-decoration: none;
+	color: @color-yellow;
+	text-align: center;
+	text-shadow: 1px 1px 1px @color-black;
+	&:focus {
+		outline: 5px solid @color-yellow;
+	}
 }
 
 .section-our-services__price-list {
@@ -2211,6 +2240,9 @@ img {
 			-webkit-transform: translate(-50%, 0);
 			transform: translate(-50%, 0);
 		}
+		&--nopicture {
+			padding-bottom: 0;
+		}
 	}
 
 	.section-our-services__partner {
@@ -2222,6 +2254,93 @@ img {
 		line-height: 40px;
 	}
 }
+
+/* SECTION-ALL-SERVICES */
+
+.section-all-services__title {
+	margin: 0 auto;
+	padding: 0;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+
+
+/* SERVICES-NAVIGATION*/
+
+.services-navigation {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.services-navigation__item {
+	position: relative;
+	margin-bottom: 5px;
+	padding-left: 15px;
+	&:before {
+		position: absolute;
+		content: "";
+		width: 5px;
+		height: 5px;
+		top: 50%;
+		left: 0;
+		background-color: @color-yellow;
+		border-radius: 50%;
+		transform: translateY(-50%);
+	}
+	&--active {
+		font-weight: bold;
+		&:before {
+			display: none;
+		}
+		.services-navigation__link {
+			color: @color-yellow;
+		}
+	}
+}
+
+.services-navigation__link {
+	text-decoration: none;
+	color: @color-grey;
+	&:focus {
+		outline: 5px solid @color-yellow;
+	}
+	&:hover {
+		color: @color-yellow;
+	}
+}
+
+@media (min-width: @width-tablet) {
+	.services-navigation {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 0 auto;
+		width: 90%;
+	}
+
+	.services-navigation__item {
+		width: 40%;
+	}
+}
+
+@media (min-width: @width-desktop) {
+	.services-navigation {
+		// width: 100%;
+	}
+
+	.services-navigation__item {
+
+	}
+}
+
+
+
+
 
 /* PAGE-NEWS */
 
