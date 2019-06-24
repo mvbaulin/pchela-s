@@ -2029,10 +2029,15 @@ img {
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
+  text-align: center;
 }
 .section-news__new-description {
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
+}
+.section-news__new-description:last-child {
+  margin-bottom: 0;
 }
 .section-news__image-wrapper {
   height: auto;
@@ -2099,29 +2104,28 @@ img {
   box-shadow: none;
 }
 @media (min-width: 768px) {
-  .section-news__new {
-    position: relative;
-    min-height: 180px;
+  .section-news__new-title {
+    margin-bottom: 20px;
   }
-  .section-news__new-content {
-    max-width: 350px;
+  .section-news__gallery {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 30px;
   }
   .section-news__image-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
+    margin-right: 30px;
     max-width: 275px;
-  }
-  .section-news__new-time {
-    position: absolute;
-    bottom: 0;
-    right: 0;
   }
 }
 @media (min-width: 1200px) {
   .section-news__new {
     box-shadow: 0px 0px 15px -14px #000000;
     border-radius: 30px;
+  }
+  .section-news__new-title {
+    text-align: left;
   }
 }
 /* PAGE PARTNERS */

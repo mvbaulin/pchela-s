@@ -6,9 +6,9 @@
 	let paginationButtons = document.querySelectorAll('.section-news__pagination-button');
 	let news = document.querySelectorAll('.section-news__new');
 
-	for (let i = 0; i < news.length; i++) {
-		news[i].children[0].removeAttribute('href');
-	}
+	// for (let i = 0; i < news.length; i++) {
+	// 	news[i].children[0].removeAttribute('href');
+	// }
 
 	for (let i = 0; i < paginationButtons.length; i++) {
 		paginationButtons[i].addEventListener('click', function(event){
