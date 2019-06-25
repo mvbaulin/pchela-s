@@ -1977,20 +1977,6 @@ img {
 .services-navigation__link:hover {
   color: #fcda00;
 }
-@media (min-width: 768px) {
-  .services-navigation {
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 90%;
-  }
-  .services-navigation__item {
-    width: 40%;
-  }
-}
 /* PAGE-NEWS */
 .section-news__title {
   margin-bottom: 20px;
