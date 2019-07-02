@@ -2376,3 +2376,23 @@ img {
     margin-top: 20px;
   }
 }
+/* PAGE-REVIEWS  */
+.section-reviews__section-title {
+  margin-bottom: 20px;
+}
+.section-reviews__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.section-reviews__list-item {
+  margin-bottom: 20px;
+}
+.section-reviews__list-item:last-child {
+  margin-bottom: 0;
+}
+.section-reviews__time {
+  color: #333333;
+  font-weight: bold;
+  opacity: 0.5;
+}
