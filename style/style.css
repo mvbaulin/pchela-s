@@ -1855,6 +1855,11 @@ img {
 .section-our-services__call-button:focus {
   outline: 5px solid #fcda00;
 }
+.section-our-services__map {
+  margin-top: 20px;
+  font-size: 0;
+  line-height: 0;
+}
 .section-our-services__price-list {
   margin-top: 20px;
 }
